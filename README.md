@@ -1,8 +1,8 @@
 # Lerndokumentation
 
-[![CI](https://github.com/nca-apprentices/lerndoku-template/actions/workflows/ci.yml/badge.svg)](https://github.com/nca-apprentices/lerndoku-template/actions/workflows/ci.yml)
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/nca-apprentices/lerndoku-template/badge)](https://scorecard.dev/viewer/?uri=github.com/nca-apprentices/lerndoku-template)
-[![Lerndoku](https://img.shields.io/endpoint?url=https%3A%2F%2Fnca-apprentices.github.io%2Flerndoku-template%2Fbadge.json)](https://nca-apprentices.github.io/lerndoku-template/)
+[![CI](https://github.com/EliasNCA/lerndoku/actions/workflows/ci.yml/badge.svg)](https://github.com/EliasNCA/lerndoku/actions/workflows/ci.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/EliasNCA/lerndoku/badge)](https://scorecard.dev/viewer/?uri=github.com/EliasNCA/lerndoku)
+[![Lerndoku](https://img.shields.io/endpoint?url=https%3A%2F%2Feliasnca.github.io%2Flerndoku%2Fbadge.json)](https://eliasnca.github.io/lerndoku/)
 
 A Lerndokumentation for the Informatiker/in EFZ apprenticeship. You write
 Markdown entries in German. A [Zola](https://www.getzola.org) build turns them
