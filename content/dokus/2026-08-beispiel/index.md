@@ -2,7 +2,6 @@
 title = "Beispiel: HTTP-Grundlagen"
 date = 2026-08-15
 description = "Was ich diesen Monat über HTTP gelernt habe."
-
 [extra]
 tags = ["HTTP", "DevTools"]
 +++
