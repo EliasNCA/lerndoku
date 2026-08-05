@@ -2,7 +2,7 @@
 # One-time setup after "Use this template": activate the git hook,
 # replace placeholders, configure GitHub Pages and the branch ruleset.
 # Idempotent - safe to run multiple times.
-set -eu
+set eu
 
 for tool in git gh mise perl; do
   command -v "$tool" >/dev/null 2>&1 || {
