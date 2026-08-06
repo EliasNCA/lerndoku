@@ -1,0 +1,630 @@
+# Rechercheauftrag: On-Device-AI für mobile Apps
+
+## Auftrag
+
+Während der nächsten zwei bis drei Tagen recherchiert ihr verschiedene
+Möglichkeiten für eine mobile App mit einem LLM.
+
+Die App soll später grundsätzlich auf folgenden Plattformen umgesetzt werden
+können:
+
+- iOS mit Swift
+- Android mit Java
+
+Ihr müsst noch keine fertige Projektidee entwickeln und noch keine App
+programmieren.
+
+Zuerst sammelt ihr möglichst viele interessante Technologien, AI-Modelle, APIs
+und mögliche Funktionen.
+
+---
+
+## Ziel
+
+Am Ende der Recherche sollt ihr wissen:
+
+- Welche AI-Modelle gibt es?
+- Welche Modelle könnten auf einem Smartphone laufen?
+- Welche Aufgaben können diese Modelle lösen?
+- Welche APIs könnten für eine mobile App verwendet werden?
+- Welche Technologien gibt es für iOS und Android?
+- Welche Themen interessieren euch besonders?
+- Welche Möglichkeiten wären für ein späteres Projekt realistisch?
+
+---
+
+## 1. AI-Modelle recherchieren
+
+Sucht mindestens **15 verschiedene AI-Modelle**, die euch interessieren.
+
+Ihr könnt unter anderem auf folgenden Plattformen suchen:
+
+- Hugging Face Models
+- Kaggle Models
+- ModelScope
+- TensorFlow Hub
+- PyTorch Hub
+- ONNX Model Zoo
+- Apple Core ML Models
+- Qualcomm AI Hub Models
+- NVIDIA NGC Catalog
+- Ollama Library
+
+Ihr müsst nicht nur Sprachmodelle suchen.
+
+Mögliche Arten von AI-Modellen:
+
+- Textgenerierung
+- Chatbots
+- Übersetzung
+- Zusammenfassung
+- Spracherkennung
+- Text-to-Speech
+- Bilderkennung
+- Objekterkennung
+- Texterkennung aus Bildern
+- Bildgenerierung
+- Sentimentanalyse
+- Rechtschreibkorrektur
+- Klassifikation
+- Frage-Antwort-Systeme
+- Modelle für Dokumente
+
+Zusätzlich könnt ihr Technologien untersuchen, mit denen AI-Modelle in Apps
+integriert oder lokal ausgeführt werden können:
+
+- Core ML
+- MLX
+- LiteRT
+- MediaPipe
+- ONNX Runtime
+- llama.cpp
+- TensorFlow
+- PyTorch
+
+### Fragen zu jedem Modell
+
+Beantwortet zu jedem gefundenen Modell kurz folgende Fragen:
+
+1. Wie heisst das Modell?
+2. Wo wurde das Modell gefunden?
+3. Wer hat das Modell entwickelt? (optional wäre nice zu wissen)
+4. Was kann das Modell?
+5. Warum interessiert euch das Modell?
+6. Welche Eingaben verarbeitet es?
+7. Welche Ergebnisse erstellt es?
+8. Welche Sprachen unterstützt es?
+9. Wie gross ist das Modell?
+10. Kann es ohne Internet verwendet werden?
+11. Könnte es auf einem Smartphone laufen?
+12. Gibt es eine kleinere oder quantisierte Version?
+13. Welche Lizenz besitzt das Modell?
+14. Welche Einschränkungen hat das Modell?
+15. Wofür könnte man es in einer App verwenden?
+
+### Tabelle für die Modelle
+
+| Nr. | Modell                     | Aufgabe                                  | Grösse                                   | Offline möglich | Smartphone geeignet   | Quelle                          |
+| --: | -------------------------- | ---------------------------------------- | ---------------------------------------- | --------------- | --------------------- | ------------------------------- |
+|   1 | Instella-MoE-16B-A3B-Think | Textgenerierung, Chatbot, Reasoning      | 16B Parameter (2,8B aktiv)               | Ja              | Eher nein             | Hugging Face (AMD)              |
+|   2 | Fine-Tuned T5 Small        | Textezusammenfassung                     | ca. 242 MB                               | Ja              | Ja                    | Hugging Face (Falcons.ai)       |
+|   3 | NLLB-200 Distilled 600M    | Textübersetzung                          | 600 Mio. Parameter (circa 2,5 GB)        | Ja              | Eher nein             | Hugging Face (Meta AI)          |
+|   4 | VGGish                     | Audioanalyse und Geräuscherkennung       | ca. 275 MB                               | Ja              | Ja                    | Kaggle Models (Google)          |
+|   5 | BGE                        | Text-Embeddings und Suche                | Je nach Version, z.B. 33,4 Mio Parameter | Ja              | Ja (kleine Versionen) | Kaggle Models (Keras)           |
+|   6 | Diffusion Gemma            | Textgenerierung mit Diffusionsverfahren  | 25.2 Mrd. Parameter (3.8 Mrd aktiv)      | Ja              | Eher nein             | Kaggle Models (Google DeepMind) |
+|   7 | segmentation-3.0           | Sprechererkennung und Audiosegmentierung | ca. 6 MB                                 | Ja              | Ja                    | Hugging Face (pyannote)         |
+|   8 | Donut-Base                 | Dokumentanalyse                          | 200 Mio. Parameter, 800 MB               | Ja              | Ja                    | Hugging Face (naver-clova-ix)   |
+|   9 | Blip-image-captioning-base | Bildbeschreibung                         | 247 Mio. Parameter, 990 MB               | Ja              | Ja                    | Hugging Face (Saleforce)        |
+|  10 | SpeechT5_tts               | Text-zu-Sprache                          | 144 Mio. Parameter, 586 MB               | Ja              | Ja                    | Hugging Face (Microsoft)        |
+|  11 |                            |                                          |                                          |                 |                       |                                 |
+|  12 |                            |                                          |                                          |                 |                       |                                 |
+|  13 |                            |                                          |                                          |                 |                       |                                 |
+|  14 |                            |                                          |                                          |                 |                       |                                 |
+|  15 |                            |                                          |                                          |                 |                       |                                 |
+
+#### 1. Modell: Instella-MoE-16B-A3B-Think Fragen beantworten
+
+| Frage                                                | Antwort                                                                                                                      |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| 1. Wie heisst das Modell?                            | Instella-MoE-16B-A3B-Think                                                                                                   |
+| 2. Wo wurde das Modell gefunden?                     | Hugging Face                                                                                                                 |
+| 3. Wer hat das Modell entwickelt?                    | AMD                                                                                                                          |
+| 4. Was kann das Modell?                              | Texte generieren, Fragen beantworten und Anweisungen befolgen.                                                               |
+| 5. Warum interessiert euch das Modell?               | Es wurde von AMD entwickelt und ist als Open-Source-Modell verfügbar.                                                        |
+| 6. Welche Eingaben verarbeitet es?                   | Texte und Chat-Nachrichten.                                                                                                  |
+| 7. Welche Ergebnisse erstellt es?                    | Texte und Antworten.                                                                                                         |
+| 8. Welche Sprachen unterstützt es?                   | Hauptsächlich Englisch.                                                                                                      |
+| 9. Wie gross ist das Modell?                         | 16 Milliarden Parameter.                                                                                                     |
+| 10. Kann es ohne Internet verwendet werden?          | Ja, nach dem Herunterladen.                                                                                                  |
+| 11. Könnte es auf einem Smartphone laufen?           | Eher nein, da es zu gross ist.                                                                                               |
+| 12. Gibt es eine kleinere oder quantisierte Version? | Nein. Es gibt verschiedene Trainingsstufen (Pretrain, Base, SFT, DPO, Think), aber keine kleinere oder quantisierte Version. |
+| 13. Welche Lizenz besitzt das Modell?                | ResearchRAIL License                                                                                                         |
+| 14. Welche Einschränkungen hat das Modell?           | Benötigt viel Speicher und Rechenleistung.                                                                                   |
+| 15. Wofür könnte man es in einer App verwenden?      | Chatbot, Textgenerator oder KI-Assistent.                                                                                    |
+
+#### 2. Modell Fine-Tuned T5 Small Fragen beantworten
+
+| Frage                                                | Antwort                                                                                             |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| 1. Wie heisst das Modell?                            | Fine-Tuned T5 Small                                                                                 |
+| 2. Wo wurde das Modell gefunden?                     | Hugging Face                                                                                        |
+| 3. Wer hat das Modell entwickelt?                    | Falcons.ai                                                                                          |
+| 4. Was kann das Modell?                              | Es fasst lange Texte zu kurzen Zusammenfassungen zusammen.                                          |
+| 5. Warum interessiert euch das Modell?               | Es eignet sich gut zum Zusammenfassen von Texten und Dokumenten.                                    |
+| 6. Welche Eingaben verarbeitet es?                   | Texte.                                                                                              |
+| 7. Welche Ergebnisse erstellt es?                    | Kurze Zusammenfassungen von Texten.                                                                 |
+| 8. Welche Sprachen unterstützt es?                   | Englisch.                                                                                           |
+| 9. Wie gross ist das Modell?                         | Ca. 242 MB.                                                                                         |
+| 10. Kann es ohne Internet verwendet werden?          | Ja, nach dem Herunterladen.                                                                         |
+| 11. Könnte es auf einem Smartphone laufen?           | Ja, da es ein relativ kleines Modell ist.                                                           |
+| 12. Gibt es eine kleinere oder quantisierte Version? | Keine kleinere Version auf der Modellseite. Es werden jedoch ONNX- und Core ML-Versionen angeboten. |
+| 13. Welche Lizenz besitzt das Modell?                | Apache 2.0                                                                                          |
+| 14. Welche Einschränkungen hat das Modell?           | Hauptsächlich für englische Texte geeignet.                                                         |
+| 15. Wofür könnte man es in einer App verwenden?      | Zum Zusammenfassen von Dokumenten, Artikeln oder Notizen.                                           |
+
+#### 3. Modell: NLLB-200 Distilled 600M Fragen beantworten
+
+| Frage                                                | Antwort                                                                   |
+| ---------------------------------------------------- | ------------------------------------------------------------------------- |
+| 1. Wie heisst das Modell?                            | NLLB-200 Distilled 600M                                                   |
+| 2. Wo wurde das Modell gefunden?                     | Hugging Face                                                              |
+| 3. Wer hat das Modell entwickelt?                    | Meta AI (Facebook)                                                        |
+| 4. Was kann das Modell?                              | Es übersetzt Texte zwischen vielen verschiedenen Sprachen.                |
+| 5. Warum interessiert euch das Modell?               | Es unterstützt sehr viele Sprachen und eignet sich für Übersetzungen.     |
+| 6. Welche Eingaben verarbeitet es?                   | Texte.                                                                    |
+| 7. Welche Ergebnisse erstellt es?                    | Übersetzte Texte.                                                         |
+| 8. Welche Sprachen unterstützt es?                   | Rund 200 Sprachen.                                                        |
+| 9. Wie gross ist das Modell?                         | 600 Millionen Parameter (ca. 2,5 GB).                                     |
+| 10. Kann es ohne Internet verwendet werden?          | Ja, nach dem Herunterladen.                                               |
+| 11. Könnte es auf einem Smartphone laufen?           | Eher nein, da es relativ gross ist.                                       |
+| 12. Gibt es eine kleinere oder quantisierte Version? | Ja, es gibt kleinere NLLB-Modelle, z. B. eine 350M-Version.               |
+| 13. Welche Lizenz besitzt das Modell?                | CC-BY-NC 4.0                                                              |
+| 14. Welche Einschränkungen hat das Modell?           | Nicht für kommerzielle Nutzung gedacht und für Smartphones eher zu gross. |
+| 15. Wofür könnte man es in einer App verwenden?      | Übersetzungs-App, Chat-Übersetzer oder Übersetzung von Dokumenten.        |
+
+#### 4. Modell: VGGish Fragen beantworten
+
+| Frage                                                | Antwort                                             |
+| ---------------------------------------------------- | --------------------------------------------------- |
+| 1. Wie heisst das Modell?                            | VGGish                                              |
+| 2. Wo wurde das Modell gefunden?                     | Kaggie Models                                       |
+| 3. Wer hat das Modell entwickelt?                    | Google                                              |
+| 4. Was kann das Modell?                              | Es analysiert Audiodaten und erkennt Audio-Merkmale |
+| 5. Warum interessiert euch das Modell?               | Es eignet sich für Audio- und Geräuscherkennung     |
+| 6. Welche Eingaben verarbeitet es?                   | Audiodaten und Audiosignale                         |
+| 7. Welche Ergebnisse erstellt es?                    | Audio-Merkmale                                      |
+| 8. Welche Sprachen unterstützt es?                   | Keine, da es Audio verarbeitet                      |
+| 9. Wie gross ist das Modell?                         | ca. 275 MB                                          |
+| 10. Kann es ohne Internet verwendet werden?          | Ja                                                  |
+| 11. Könnte es auf einem Smartphone laufen?           | Ja                                                  |
+| 12. Gibt es eine kleinere oder quantisierte Version? | Ja, es gibt mobile Versionen                        |
+| 13. Welche Lizenz besitzt das Modell?                | Apache 2.0                                          |
+| 14. Welche Einschränkungen hat das Modell?           | Erkennt keine Sprache oder Texte                    |
+| 15. Wofür könnte man es in einer App verwenden?      | Geräuscherkennung und Audioanalyse                  |
+
+#### 5. Modell: BGE (BAAI General Embedding) Fragen beantworten
+
+| Frage                                                | Antwort                                                                           |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------- |
+| 1. Wie heisst das Modell?                            | BGE                                                                               |
+| 2. Wo wurde das Modell gefunden?                     | Kaggle Models                                                                     |
+| 3. Wer hat das Modell entwickelt?                    | BAAI (Beijing Academy of Artificial Intelligence)                                 |
+| 4. Was kann das Modell?                              | Es erstellt Embeddings für Texte, um sie zu vergleichen und durchsuchen zu können |
+| 5. Warum interessiert euch das Modell?               | Es eignet sich für intelligente Suchfunktionen                                    |
+| 6. Welche Eingaben verarbeitet es?                   | Texte                                                                             |
+| 7. Welche Ergebnisse erstellt es?                    | Text-Embeddings                                                                   |
+| 8. Welche Sprachen unterstützt es?                   | Mehrere Sprachen (je nach Modellversion)                                          |
+| 9. Wie gross ist das Modell?                         | Unterschiedlich, je nach Version (z.B. 33,4 Mio Parameter                         |
+| 10. Kann es ohne Internet verwendet werden?          | Ja                                                                                |
+| 11. Könnte es auf einem Smartphone laufen?           | Ja, kleinere Versionen sind dafür geeignet                                        |
+| 12. Gibt es eine kleinere oder quantisierte Version? | Ja, es gibt verschiedene Modellgrössen                                            |
+| 13. Welche Lizenz besitzt das Modell?                | MIT                                                                               |
+| 14. Welche Einschränkungen hat das Modell?           | Es erzeugt keine Texte oder Antworten                                             |
+| 15. Wofür könnte man es in einer App verwenden?      | Intelligente Suche, Dokumentensuche oder Empfehlungssysteme                       |
+
+#### 6. Modell Diffusion Gemma Fragen beantworten
+
+| Frage                                                | Antwort                                                              |
+| ---------------------------------------------------- | -------------------------------------------------------------------- |
+| 1. Wie heisst das Modell?                            | Diffusion Gemma                                                      |
+| 2. Wo wurde das Modell gefunden?                     | Kaggle Models                                                        |
+| 3. Wer hat das Modell entwickelt?                    | Google DeepMind                                                      |
+| 4. Was kann das Modell?                              | Es generiert Texte mit einem Diffusionsverfahren                     |
+| 5. Warum interessiert euch das Modell?               | Es zeigt eine andere Methode zur Textgenerierung als klassische LLMs |
+| 6. Welche Eingaben verarbeitet es?                   | Text, Bilder und Videos                                              |
+| 7. Welche Ergebnisse erstellt es?                    | Texte                                                                |
+| 8. Welche Sprachen unterstützt es?                   | Mehrere Sprachen                                                     |
+| 9. Wie gross ist das Modell?                         | 25.2 Mrd. Parameter                                                  |
+| 10. Kann es ohne Internet verwendet werden?          | Ja                                                                   |
+| 11. Könnte es auf einem Smartphone laufen?           | Eher nein                                                            |
+| 12. Gibt es eine kleinere oder quantisierte Version? | Ja, es gibt quantisierte Versionen                                   |
+| 13. Welche Lizenz besitzt das Modell?                | Apache 2.0                                                           |
+| 14. Welche Einschränkungen hat das Modell?           | Benötigt leistungsstarke Hardware                                    |
+| 15. Wofür könnte man es in einer App verwenden?      | Chatbot, Textgenerator oder Schreibassistent                         |
+
+#### 7. Modell segmentation-3.0 Fragen beantworten
+
+| Frage                                                | Antwort                                                           |
+| ---------------------------------------------------- | ----------------------------------------------------------------- |
+| 1. Wie heisst das Modell?                            | segmentation-3.0                                                  |
+| 2. Wo wurde das Modell gefunden?                     | Hugging Face                                                      |
+| 3. Wer hat das Modell entwickelt?                    | pyannote                                                          |
+| 4. Was kann das Modell?                              | Es erkennt, wann gesprochen wird und trennt verschiedene Sprachen |
+| 5. Warum interessiert euch das Modell?               | Es eignet sich für Sprach- und Audioanwendungen                   |
+| 6. Welche Eingaben verarbeitet es?                   | Audiodateien                                                      |
+| 7. Welche Ergebnisse erstellt es?                    | Sprachsegmente und Sprecherinformationen                          |
+| 8. Welche Sprachen unterstützt es?                   | Mehrere Sprachen                                                  |
+| 9. Wie gross ist das Modell?                         | Ca. 6 MB                                                          |
+| 10. Kann es ohne Internet verwendet werden?          | Ja                                                                |
+| 11. Könnte es auf einem Smartphone laufen?           | Ja                                                                |
+| 12. Gibt es eine kleinere oder quantisierte Version? | Ja, es gibt quantisierte Versionen                                |
+| 13. Welche Lizenz besitzt das Modell?                | MIT                                                               |
+| 14. Welche Einschränkungen hat das Modell?           | Es verarbeitet nur Audio und erzeugt keine Texte                  |
+| 15. Wofür könnte man es in einer App verwenden?      | Sprechererkennung, Sprachaufnahmen oder Meeting-Analyse           |
+
+#### 8. Modell: donut-base Fragen beantworten
+
+| Frage                                                | Antwort                                                               |
+| ---------------------------------------------------- | --------------------------------------------------------------------- |
+| 1. Wie heisst das Modell?                            | Donut-Base                                                            |
+| 2. Wo wurde das Modell gefunden?                     | Hugging Face                                                          |
+| 3. Wer hat das Modell entwickelt?                    | naver-clova-ix                                                        |
+| 4. Was kann das Modell?                              | Es analysiert Dokumente und liest Informationen direkt aus Bildern    |
+| 5. Warum interessiert euch das Modell?               | Es eignet sich für die Verarbeitung von Dokumenten                    |
+| 6. Welche Eingaben verarbeitet es?                   | Dokumentbilder und Bilder                                             |
+| 7. Welche Ergebnisse erstellt es?                    | Texte und Informationen aus Dokumenten                                |
+| 8. Welche Sprachen unterstützt es?                   | Mehrere Sprachen (Englisch, Chinesisch, Japanisch und Koreanisch)     |
+| 9. Wie gross ist das Modell?                         | 200 Millionen Parameter                                               |
+| 10. Kann es ohne Internet verwendet werden?          | Ja                                                                    |
+| 11. Könnte es auf einem Smartphone laufen?           | Ja                                                                    |
+| 12. Gibt es eine kleinere oder quantisierte Version? | Es gibt verschiedene Donut-Modelle                                    |
+| 13. Welche Lizenz besitzt das Modell?                | MIT                                                                   |
+| 14. Welche Einschränkungen hat das Modell?           | Das Basismodell muss für eine konkrete Aufgabe weitertrainiert werden |
+| 15. Wofür könnte man es in einer App verwenden?      | Rechnungen, Formulare oder Belege analysieren                         |
+
+#### 9. Modell: blip-image-captioning-base Fragen beantworten
+
+| Frage                                                | Antwort                                               |
+| ---------------------------------------------------- | ----------------------------------------------------- |
+| 1. Wie heisst das Modell?                            | blip-image-captioning-base                            |
+| 2. Wo wurde das Modell gefunden?                     | Hugging Face                                          |
+| 3. Wer hat das Modell entwickelt?                    | Salesforce                                            |
+| 4. Was kann das Modell?                              | Es erstellt Beschreibungen für Bilder                 |
+| 5. Warum interessiert euch das Modell?               | Es eignet sich für Bildanalyse und Bildbeschreibungen |
+| 6. Welche Eingaben verarbeitet es?                   | Bilder                                                |
+| 7. Welche Ergebnisse erstellt es?                    | Beschreibungen (Texte) von Bildern                    |
+| 8. Welche Sprachen unterstützt es?                   | Englisch                                              |
+| 9. Wie gross ist das Modell?                         | 247 Mio Parametern, ca. 990 MB                        |
+| 10. Kann es ohne Internet verwendet werden?          | Ja, nach dem Herunterladen                            |
+| 11. Könnte es auf einem Smartphone laufen?           | Ja                                                    |
+| 12. Gibt es eine kleinere oder quantisierte Version? | Ja, es gibt quantisierte Versionen                    |
+| 13. Welche Lizenz besitzt das Modell?                | bsd-3-clause                                          |
+| 14. Welche Einschränkungen hat das Modell?           | Es ist hauptsächlich für Bildbeschreibungen geeignet  |
+| 15. Wofür könnte man es in einer App verwenden?      | Bilder automatisch beschreiben oder Fotos analysieren |
+
+#### 10. Modell: speech5_tts Fragen beantworten
+
+| Frage                                                | Antwort                                              |
+| ---------------------------------------------------- | ---------------------------------------------------- |
+| 1. Wie heisst das Modell?                            | speechT5 (TTS task)                                  |
+| 2. Wo wurde das Modell gefunden?                     | Hugging Face                                         |
+| 3. Wer hat das Modell entwickelt?                    | Microsoft (Junyi Ao, Rui Wang etc.)                  |
+| 4. Was kann das Modell?                              | Es wandelt Text in gesprochene Sprache um            |
+| 5. Warum interessiert euch das Modell?               | Es eignet sich für Sprachausgabe in Apps             |
+| 6. Welche Eingaben verarbeitet es?                   | Text                                                 |
+| 7. Welche Ergebnisse erstellt es?                    | Gesprochene Sprache (Audio)                          |
+| 8. Welche Sprachen unterstützt es?                   | Englisch                                             |
+| 9. Wie gross ist das Modell?                         | 144 Mio. Parameter, 540 MB                           |
+| 10. Kann es ohne Internet verwendet werden?          | Ja, nach dem Herunterladen                           |
+| 11. Könnte es auf einem Smartphone laufen?           | Ja                                                   |
+| 12. Gibt es eine kleinere oder quantisierte Version? | Es gibt weitere SpeechT5-Modelle für andere Aufgaben |
+| 13. Welche Lizenz besitzt das Modell?                | MIT                                                  |
+| 14. Welche Einschränkungen hat das Modell?           | Es unterstützt hauptsächlich Englisch                |
+| 15. Wofür könnte man es in einer App verwenden?      | Vorlesen von Texten oder Sprachassistenten           |
+
+```text
+---
+
+# 2. APIs und Geräteschnittstellen recherchieren
+
+Sucht APIs und Schnittstellen, die für eine mobile AI-App interessant sein könnten.
+
+Mögliche Beispiele:
+
+* Kamera
+* Mikrofon
+* Dateisystem
+* Bildergalerie
+* lokale Datenbank
+* Standort
+* Kalender
+* Kontakte
+* Benachrichtigungen
+* Spracherkennung
+* Text-to-Speech
+* Texterkennung
+* Bluetooth
+* Internetzugriff
+* Zwischenablage
+* Sensoren
+* lokale AI-Schnittstelle
+
+Sucht mindestens **10 verschiedene APIs oder Schnittstellen**.
+
+## Fragen zu jeder API
+
+1. Wie heisst die API oder Schnittstelle?
+2. Was kann sie?
+3. Für welche App-Funktion könnte sie verwendet werden?
+4. Gibt es sie auf iOS?
+5. Gibt es sie auf Android?
+6. Benötigt sie Internet?
+7. Welche Berechtigungen werden benötigt?
+8. Welche Daten verarbeitet sie?
+9. Verarbeitet sie persönliche oder sensible Daten?
+10. Könnte sie mit einem lokalen AI-Modell kombiniert werden?
+
+## Tabelle für die APIs
+
+| Nr. | API oder Schnittstelle | Funktion | iOS | Android | Internet nötig | Verarbeitete Daten |
+|----:|------------------------|----------|-----|---------|----------------|--------------------|
+|   1 |                        |          |     |         |                |                    |
+|   2 |                        |          |     |         |                |                    |
+|   3 |                        |          |     |         |                |                    |
+|   4 |                        |          |     |         |                |                    |
+|   5 |                        |          |     |         |                |                    |
+|   6 |                        |          |     |         |                |                    |
+|   7 |                        |          |     |         |                |                    |
+|   8 |                        |          |     |         |                |                    |
+|   9 |                        |          |     |         |                |                    |
+|  10 |                        |          |     |         |                |                    |
+
+---
+
+# 3. Technologien für iOS recherchieren
+
+Sucht Technologien, mit denen AI-Funktionen auf iOS umgesetzt werden können.
+
+Mögliche Suchbegriffe:
+
+* Swift AI
+* Swift On-Device AI
+* Core ML
+* Apple Intelligence
+* Foundation Models Framework
+* MLX Swift
+* Vision Framework
+* Natural Language Framework
+* Speech Framework
+* Create ML
+
+## Fragen zur iOS-Recherche
+
+1. Welche AI-Technologien bietet Apple an?
+2. Welche Technologien funktionieren direkt auf dem Gerät?
+3. Welche Modellformate werden unterstützt?
+4. Wie kann ein Modell in Swift verwendet werden?
+5. Welche Technologien unterstützen Text?
+6. Welche Technologien unterstützen Bilder?
+7. Welche Technologien unterstützen Sprache?
+8. Welche Geräte werden benötigt?
+9. Welche iOS-Version wird benötigt?
+10. Welche Einschränkungen gibt es?
+11. Können Modelle von Hugging Face verwendet werden?
+12. Müssen Modelle zuerst konvertiert werden?
+
+## Tabelle für iOS-Technologien
+
+| Technologie | Aufgabe | Lokal ausführbar | Programmiersprache | Einschränkungen |
+|-------------|---------|------------------|--------------------|-----------------|
+|             |         |                  | Swift              |                 |
+|             |         |                  | Swift              |                 |
+|             |         |                  | Swift              |                 |
+|             |         |                  | Swift              |                 |
+|             |         |                  | Swift              |                 |
+
+---
+
+# 4. Technologien für Android recherchieren
+
+Sucht Technologien, mit denen AI-Funktionen auf Android umgesetzt werden können.
+
+Mögliche Suchbegriffe:
+
+* Android On-Device AI
+* Java AI Android
+* LiteRT
+* TensorFlow Lite
+* MediaPipe
+* ML Kit
+* ONNX Runtime Mobile
+* ExecuTorch
+* llama.cpp Android
+* Android Neural Networks API
+
+## Fragen zur Android-Recherche
+
+1. Welche AI-Technologien gibt es für Android?
+2. Welche Technologien können mit Java verwendet werden?
+3. Welche Modelle können lokal ausgeführt werden?
+4. Welche Modellformate werden unterstützt?
+5. Können GPU oder NPU verwendet werden?
+6. Welche Android-Versionen werden unterstützt?
+7. Welche Geräteanforderungen gibt es?
+8. Welche Unterschiede gibt es zwischen Android-Geräten?
+9. Können Hugging-Face-Modelle verwendet werden?
+10. Müssen Modelle zuerst konvertiert werden?
+11. Welche Technologien eignen sich für Text?
+12. Welche Technologien eignen sich für Bilder und Sprache?
+
+## Tabelle für Android-Technologien
+
+| Technologie | Aufgabe | Lokal ausführbar | Mit Java verwendbar | Einschränkungen |
+|-------------|---------|------------------|---------------------|-----------------|
+|             |         |                  |                     |                 |
+|             |         |                  |                     |                 |
+|             |         |                  |                     |                 |
+|             |         |                  |                     |                 |
+|             |         |                  |                     |                 |
+
+---
+
+# 5. Interessante AI-Funktionen sammeln
+
+Sammelt mindestens **15 Funktionen**, die eine AI-App besitzen könnte.
+
+Beispiele:
+
+* Texte zusammenfassen
+* Texte übersetzen
+* Fragen beantworten
+* Texte vereinfachen
+* Notizen sortieren
+* Sprache in Text umwandeln
+* Text vorlesen
+* Objekte in Bildern erkennen
+* Dokumente analysieren
+* Lernfragen erstellen
+* Texte korrigieren
+* Ideen vorschlagen
+* Termine aus Texten erkennen
+* Bilder beschreiben
+* lokale Dateien durchsuchen
+
+## Fragen zu jeder Funktion
+
+1. Was macht die Funktion?
+2. Für wen wäre sie nützlich?
+3. Welches Problem löst sie?
+4. Welches AI-Modell könnte dafür verwendet werden?
+5. Welche APIs werden benötigt?
+6. Funktioniert sie offline?
+7. Könnte sie auf iOS und Android umgesetzt werden?
+8. Wie schwierig wäre die Umsetzung?
+9. Welche Daten verarbeitet die Funktion?
+10. Welche Datenschutzprobleme könnten entstehen?
+
+## Tabelle für mögliche Funktionen
+
+| Nr. | Funktion | Mögliches Modell | Benötigte APIs | Offline möglich | Interesse               |
+|----:|----------|------------------|----------------|-----------------|-------------------------|
+|   1 |          |                  |                |                 | niedrig / mittel / hoch |
+|   2 |          |                  |                |                 | niedrig / mittel / hoch |
+|   3 |          |                  |                |                 | niedrig / mittel / hoch |
+|   4 |          |                  |                |                 | niedrig / mittel / hoch |
+|   5 |          |                  |                |                 | niedrig / mittel / hoch |
+|   6 |          |                  |                |                 | niedrig / mittel / hoch |
+|   7 |          |                  |                |                 | niedrig / mittel / hoch |
+|   8 |          |                  |                |                 | niedrig / mittel / hoch |
+|   9 |          |                  |                |                 | niedrig / mittel / hoch |
+|  10 |          |                  |                |                 | niedrig / mittel / hoch |
+|  11 |          |                  |                |                 | niedrig / mittel / hoch |
+|  12 |          |                  |                |                 | niedrig / mittel / hoch |
+|  13 |          |                  |                |                 | niedrig / mittel / hoch |
+|  14 |          |                  |                |                 | niedrig / mittel / hoch |
+|  15 |          |                  |                |                 | niedrig / mittel / hoch |
+
+---
+
+# 6. On-Device und Cloud vergleichen
+
+Untersucht den Unterschied zwischen lokaler AI und AI aus der Cloud.
+
+## Fragen
+
+1. Was bedeutet On-Device-AI?
+2. Was bedeutet Cloud-AI?
+3. Welche Variante benötigt Internet?
+4. Welche Variante schützt persönliche Daten besser?
+5. Welche Variante ist schneller?
+6. Welche Variante benötigt mehr Speicherplatz auf dem Gerät?
+7. Welche Variante verursacht laufende Kosten?
+8. Welche Variante funktioniert auf älteren Smartphones besser?
+9. Welche Variante kann grössere Modelle verwenden?
+10. Welche Variante wäre für ein Schulprojekt geeigneter?
+
+## Vergleich
+
+| Thema               | On-Device-AI | Cloud-AI |
+|---------------------|--------------|----------|
+| Internetverbindung  |              |          |
+| Datenschutz         |              |          |
+| Geschwindigkeit     |              |          |
+| Modellgrösse        |              |          |
+| Kosten              |              |          |
+| Geräteanforderungen |              |          |
+| Offline-Nutzung     |              |          |
+| Entwicklungsaufwand |              |          |
+
+---
+
+# 7. Auswahl der interessantesten Ergebnisse
+
+Wählt nach der Recherche eure **fünf interessantesten Ergebnisse** aus.
+
+Das können sein:
+
+* AI-Modelle
+* Technologien
+* APIs
+* Funktionen
+* Frameworks
+* Bibliotheken
+
+Beantwortet zu jedem Ergebnis:
+
+1. Was habt ihr gefunden?
+2. Warum findet ihr es interessant?
+3. Was könnte man damit entwickeln?
+4. Könnte es auf iOS verwendet werden?
+5. Könnte es auf Android verwendet werden?
+6. Ist eine Offline-Nutzung möglich?
+7. Welche Probleme könnten entstehen?
+8. Möchtet ihr dieses Thema später genauer untersuchen?
+
+---
+
+# 8. Persönliches Fazit
+
+Beantwortet am Schluss folgende Fragen:
+
+1. Welche AI-Art interessiert euch am meisten?
+2. Welches Modell fandet ihr am interessantesten?
+3. Welche API würdet ihr gerne verwenden?
+4. Welche iOS-Technologie fandet ihr interessant?
+5. Welche Android-Technologie fandet ihr interessant?
+6. Welche Funktionen wären für eine spätere App geeignet?
+7. Was hat euch bei der Recherche überrascht?
+8. Welche Themen möchtet ihr noch genauer untersuchen?
+9. Welche drei möglichen Richtungen für ein Projekt erkennt ihr?
+10. Welche Richtung würdet ihr aktuell empfehlen?
+
+---
+
+# Anforderungen
+
+Die Dokumentation muss mindestens enthalten:
+
+* [ ] 15 recherchierte AI-Modelle
+* [ ] 10 recherchierte APIs oder Schnittstellen
+* [ ] 5 iOS-Technologien
+* [ ] 5 Android-Technologien
+* [ ] 15 mögliche AI-Funktionen
+* [ ] einen Vergleich zwischen On-Device-AI und Cloud-AI
+* [ ] fünf besonders interessante Ergebnisse
+* [ ] ein persönliches Fazit
+* [ ] Quellen und Links zu den gefundenen Informationen
+
+---
+
+# Wichtig
+
+* Es muss noch keine feste Projektidee ausgewählt werden.
+* Es muss noch keine App programmiert werden.
+* Ihr dürft verschiedene AI-Bereiche untersuchen.
+* Die Recherche darf nicht nur auf Hugging Face stattfinden.
+* Schreibt die Informationen in eigenen Worten.
+* Gebt bei allen wichtigen Informationen die Quelle an.
+* Achtet auf Modellgrösse, Lizenz, Datenschutz und Geräteanforderungen.
+* Überlegt immer, ob eine Technologie auf iOS und Android verwendet werden könnte.
+```
