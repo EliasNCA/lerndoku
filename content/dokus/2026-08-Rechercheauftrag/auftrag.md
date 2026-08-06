@@ -322,36 +322,36 @@ Beantwortet zu jedem gefundenen Modell kurz folgende Fragen:
 | 14. Welche Einschränkungen hat das Modell?           | Es unterstützt hauptsächlich Englisch                |
 | 15. Wofür könnte man es in einer App verwenden?      | Vorlesen von Texten oder Sprachassistenten           |
 
-```text
 ---
 
-# 2. APIs und Geräteschnittstellen recherchieren
+## 2. APIs und Geräteschnittstellen recherchieren
 
-Sucht APIs und Schnittstellen, die für eine mobile AI-App interessant sein könnten.
+Sucht APIs und Schnittstellen, die für eine mobile AI-App interessant sein
+könnten.
 
 Mögliche Beispiele:
 
-* Kamera
-* Mikrofon
-* Dateisystem
-* Bildergalerie
-* lokale Datenbank
-* Standort
-* Kalender
-* Kontakte
-* Benachrichtigungen
-* Spracherkennung
-* Text-to-Speech
-* Texterkennung
-* Bluetooth
-* Internetzugriff
-* Zwischenablage
-* Sensoren
-* lokale AI-Schnittstelle
+- Kamera
+- Mikrofon
+- Dateisystem
+- Bildergalerie
+- lokale Datenbank
+- Standort
+- Kalender
+- Kontakte
+- Benachrichtigungen
+- Spracherkennung
+- Text-to-Speech
+- Texterkennung
+- Bluetooth
+- Internetzugriff
+- Zwischenablage
+- Sensoren
+- lokale AI-Schnittstelle
 
 Sucht mindestens **10 verschiedene APIs oder Schnittstellen**.
 
-## Fragen zu jeder API
+### Fragen zu jeder API
 
 1. Wie heisst die API oder Schnittstelle?
 2. Was kann sie?
@@ -364,41 +364,191 @@ Sucht mindestens **10 verschiedene APIs oder Schnittstellen**.
 9. Verarbeitet sie persönliche oder sensible Daten?
 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden?
 
-## Tabelle für die APIs
+### Tabelle für die APIs
 
-| Nr. | API oder Schnittstelle | Funktion | iOS | Android | Internet nötig | Verarbeitete Daten |
-|----:|------------------------|----------|-----|---------|----------------|--------------------|
-|   1 |                        |          |     |         |                |                    |
-|   2 |                        |          |     |         |                |                    |
-|   3 |                        |          |     |         |                |                    |
-|   4 |                        |          |     |         |                |                    |
-|   5 |                        |          |     |         |                |                    |
-|   6 |                        |          |     |         |                |                    |
-|   7 |                        |          |     |         |                |                    |
-|   8 |                        |          |     |         |                |                    |
-|   9 |                        |          |     |         |                |                    |
-|  10 |                        |          |     |         |                |                    |
+| Nr. | API oder Schnittstelle                 | Funktion                                           | iOS                    | Android                | Internet nötig | Verarbeitete Daten                              |
+| --: | -------------------------------------- | -------------------------------------------------- | ---------------------- | ---------------------- | -------------- | ----------------------------------------------- |
+|   1 | CameraX                                | Zugriff auf Kamera, Fotos, Videos und Bild analyse | Nein                   | Ja                     | Nein           | Bilder und Videos                               |
+|   2 | Notification API (NotificationManager) | Erstellt und verwaltet Benachrichtigungen          | Ähnliche API vorhanden | Ja                     | Nein           | Nachrichtentexte und Benachrichtigungen         |
+|   3 | MediaRecorder API                      | Audioaufnahme über das Mikrofon                    | Ähnliche API vorhanden | Ja                     | Nein           | Audiodateien und Sprachaufnahmen                |
+|   4 | Room Database                          | Lokale Speicherung von App Daten                   | Ähnliche API vorhanden | Ja                     | Nein           | Lokale Daten wie Texte und Einstellungen        |
+|   5 | Fused Location Provider API            | Ermittelt den Standort des Geräts                  | Ähnliche API vorhanden | Ja                     | Nein           | Standortdaten                                   |
+|   6 | Calender Provider API                  | Liest und verwaltet Kalender und Termine           | Ähnliche API vorhanden | Ja                     | Nein           | Kalender- und Termindaten                       |
+|   7 | Contacts Framework                     | Liest und verwaltet Kontakte                       | Ja                     | Ähnliche API vorhanden | Nein           | Kontaktdaten wie Name, Bild, Telefonnummer usw. |
+|   8 | Photos Framework                       | Zugriff auf Fotos & Videos von der Galerie         | Ja                     | Ähnliche API vorhanden | Nein           | Fotos, Videos und Metadaten                     |
+|   9 | FileManager                            | Verwaltet Dateien und Ordner                       | Ja                     | Ähnliche API vorhanden | Nein           | Dateien und Ordner der App                      |
+|  10 | Core Motion Framework                  | Zugriff auf Bewegungs- und Lagesensoren            | Ja                     | Ähnliche API vorhanden | Nein           | Bewegungs- und Sensordaten                      |
+
+#### 1. API: CameraX Fragen beantworten
+
+| Frage                                                         | Antwort                                                           |
+| ------------------------------------------------------------- | ----------------------------------------------------------------- |
+| 1. Wie heisst die API oder Schnittstelle?                     | CameraX                                                           |
+| 2. Was kann sie?                                              | Zugriff auf Kamera, Fotos, Videos und Bildanalyse                 |
+| 3. Für welche App-Funktion könnte sie verwendet werden?       | Fotos aufnehmen, Dokumente scannen oder Bilder mit KI analysieren |
+| 4. Gibt es sie auf iOS?                                       | Nein                                                              |
+| 5. Gibt es sie auf Android?                                   | Ja                                                                |
+| 6. Benötigt sie Internet?                                     | Nein                                                              |
+| 7. Welche Berechtigungen werden benötigt?                     | Kamera- und Galeriezugriff                                        |
+| 8. Welche Daten verarbeitet sie?                              | Bilder und Videodaten                                             |
+| 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, Bilder können persönliche Daten enthalten.                    |
+| 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja z.B. mit Modellen für Bilderkennung oder Dokumentanalyse       |
+
+#### 2. API: Notification API (NotificationManager) Fragen beantworten
+
+| Frage                                                         | Antwort                                                         |
+| ------------------------------------------------------------- | --------------------------------------------------------------- |
+| 1. Wie heisst die API oder Schnittstelle?                     | Notification API (NotificationManager)                          |
+| 2. Was kann sie?                                              | Erstellt und verwaltet Benachrichtigungen (Android Geräte)      |
+| 3. Für welche App-Funktion könnte sie verwendet werden?       | Erinnerungen, Warnungen oder KI-Ergebnisse anzeigen             |
+| 4. Gibt es sie auf iOS?                                       | Nein, es gibt aber ähnliche API (z.B. UserNotifications)        |
+| 5. Gibt es sie auf Android?                                   | Ja                                                              |
+| 6. Benötigt sie Internet?                                     | Nein (es ist eine lokale Benachrichtigung)                      |
+| 7. Welche Berechtigungen werden benötigt?                     | Die Berechtigung für Benachrichtigungen                         |
+| 8. Welche Daten verarbeitet sie?                              | Nachrichtentexte, Titel und Informationen zur Benachrichtigung  |
+| 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, wenn die Benachrichtigung persönliche Informationen enthält |
+| 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. um KI-Ergebnisse oder Erinnerungen anzuzeigen          |
+
+#### 3. API: MediaRecorder API Fragen beantworten
+
+| Frage                                                         | Antwort                                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| 1. Wie heisst die API oder Schnittstelle?                     | MediaRecorder API                                                         |
+| 2. Was kann sie?                                              | Nimmt Audio über das Mikrofon des Geräts auf                              |
+| 3. Für welche App-Funktion könnte sie verwendet werden?       | Sprachaufnahmen, Sprachsteuerung oder Audioanalyse                        |
+| 4. Gibt es sie auf iOS?                                       | Nein, es gibt aber ähnliche API's (z.B. AVAudioRecorder)                  |
+| 5. Gibt es sie auf Android?                                   | Ja                                                                        |
+| 6. Benötigt sie Internet?                                     | Nein                                                                      |
+| 7. Welche Berechtigungen werden benötigt?                     | Mikrofonzugriff                                                           |
+| 8. Welche Daten verarbeitet sie?                              | Audiosignale und Sprachaufnahmen                                          |
+| 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, Audioaufnahmen können persönliche Informationen enthalten             |
+| 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. mit Whisper für Speech-To-Text oder VGGish für Geräuscherkennung |
+
+#### 4. API: Room Database API Fragen beantworten
+
+| Frage                                                         | Antwort                                              |
+| ------------------------------------------------------------- | ---------------------------------------------------- |
+| 1. Wie heisst die API oder Schnittstelle?                     | Room Database                                        |
+| 2. Was kann sie?                                              | Speichert und verwaltet Daten lokal auf dem Gerät    |
+| 3. Für welche App-Funktion könnte sie verwendet werden?       | Speichern von Notizen und Benutzerdaten              |
+| 4. Gibt es sie auf iOS?                                       | Nein, aber es gibt ähnliche APIs (z.B. Core Data)    |
+| 5. Gibt es sie auf Android?                                   | Ja                                                   |
+| 6. Benötigt sie Internet?                                     | Nein                                                 |
+| 7. Welche Berechtigungen werden benötigt?                     | Keine                                                |
+| 8. Welche Daten verarbeitet sie?                              | Lokale gespeicherte App Daten                        |
+| 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, wenn persönliche Daten gespeichert werden        |
+| 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. um Dokumente oder Chatverlaufe zu speichern |
+
+#### 5. API: Fused Location Provider API Fragen beantworten
+
+| Frage                                                         | Antwort                                                                              |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| 1. Wie heisst die API oder Schnittstelle?                     | Fused Location Provider API                                                          |
+| 2. Was kann sie?                                              | Ermittelt den aktuellen Standort des Geräts                                          |
+| 3. Für welche App-Funktion könnte sie verwendet werden?       | Für Navigation, ortsbezogene Informationen oder Standortvorschläge                   |
+| 4. Gibt es sie auf iOS?                                       | Nein, aber es gibt ähnliche API's (z.B. Core Location)                               |
+| 5. Gibt es sie auf Android?                                   | Ja                                                                                   |
+| 6. Benötigt sie Internet?                                     | Nein                                                                                 |
+| 7. Welche Berechtigungen werden benötigt?                     | Standortberechtigung                                                                 |
+| 8. Welche Daten verarbeitet sie?                              | Standortdaten                                                                        |
+| 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, Standortdaten gelten als persönliche Daten                                       |
+| 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. damit man ortsbezogene Empfehlungen erhält oder für intelligente Navigation |
+
+#### 6. API: Calender Provider API Fragen beantworten
+
+| Frage                                                         | Antwort                                                         |
+| ------------------------------------------------------------- | --------------------------------------------------------------- |
+| 1. Wie heisst die API oder Schnittstelle?                     | Calender Provider API                                           |
+| 2. Was kann sie?                                              | Liest und verwaltet Kalender und Termine                        |
+| 3. Für welche App-Funktion könnte sie verwendet werden?       | Termine anzeigen, erstellen oder bearbeiten                     |
+| 4. Gibt es sie auf iOS?                                       | Nein, es gibt jedoch eine ähnliche API (EventKit)               |
+| 5. Gibt es sie auf Android?                                   | Ja                                                              |
+| 6. Benötigt sie Internet?                                     | Nein                                                            |
+| 7. Welche Berechtigungen werden benötigt?                     | Kalenderberechtigungen, evtl. Benachrichtigungen                |
+| 8. Welche Daten verarbeitet sie?                              | Kalender und Termine                                            |
+| 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, Kalendereinträge können persönliche Informationen enthalten |
+| 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. zum Erkennen oder Erstellen von Terminen aus Texten    |
+
+#### 7. API: Contacts Framework API Fragen beantworten
+
+| Frage                                                         | Antwort                                                              |
+| ------------------------------------------------------------- | -------------------------------------------------------------------- |
+| 1. Wie heisst die API oder Schnittstelle?                     | Contacts Framework                                                   |
+| 2. Was kann sie?                                              | Kontaktdaten lesen und verwalten                                     |
+| 3. Für welche App-Funktion könnte sie verwendet werden?       | Kontakte anzeigen, auswählen oder hinzufügen                         |
+| 4. Gibt es sie auf iOS?                                       | Ja                                                                   |
+| 5. Gibt es sie auf Android?                                   | Nein, aber es gibt eine ähnliche API (Contacts Provider)             |
+| 6. Benötigt sie Internet?                                     | Nein                                                                 |
+| 7. Welche Berechtigungen werden benötigt?                     | Zugriff auf die Kontakte                                             |
+| 8. Welche Daten verarbeitet sie?                              | Kontaktdaten wie Name, Telefonnummer, Bild, und E-Mail Adressen      |
+| 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, Kontaktdaten sind persönliche Daten                              |
+| 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. für eine intelligente Suche oder Organisieren von Kontakten |
+
+#### 8. API: Photos Framework API Fragen beantworten
+
+| Frage                                                         | Antwort                                                             |
+| ------------------------------------------------------------- | ------------------------------------------------------------------- |
+| 1. Wie heisst die API oder Schnittstelle?                     | Photos Framework API                                                |
+| 2. Was kann sie?                                              | Greift auf Fotos & Videos in der Bildergalerie zu und verwaltet sie |
+| 3. Für welche App-Funktion könnte sie verwendet werden?       | Bilder auswählen, speichern oder mit KI analysieren                 |
+| 4. Gibt es sie auf iOS?                                       | Ja                                                                  |
+| 5. Gibt es sie auf Android?                                   | Nein, aber es gibt ähnliche APIs (z.B. MediaStore)                  |
+| 6. Benötigt sie Internet?                                     | Nein                                                                |
+| 7. Welche Berechtigungen werden benötigt?                     | Zugriff auf die Galerie                                             |
+| 8. Welche Daten verarbeitet sie?                              | Fotos, Videos und Metadaten in der Galerie                          |
+| 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, Fotos & Videos können persönliche Informationen sein            |
+| 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. zur Bilderkennung, Bildbeschreibung oder Bildanalysierung  |
+
+#### 9. API: FileManager Fragen beantworten
+
+| Frage                                                         | Antwort                                                         |
+| ------------------------------------------------------------- | --------------------------------------------------------------- |
+| 1. Wie heisst die API oder Schnittstelle?                     | FileManager                                                     |
+| 2. Was kann sie?                                              | Kann Ordner und Dateien auf dem Gerät verwalten                 |
+| 3. Für welche App-Funktion könnte sie verwendet werden?       | Dateien speichern, lesen oder löschen                           |
+| 4. Gibt es sie auf iOS?                                       | Ja                                                              |
+| 5. Gibt es sie auf Android?                                   | Nein, aber es gibt ähnliche APIs (z.B. File API)                |
+| 6. Benötigt sie Internet?                                     | Nein                                                            |
+| 7. Welche Berechtigungen werden benötigt?                     | Keine besonderen Berechtigungen für den App-Speicher            |
+| 8. Welche Daten verarbeitet sie?                              | Ordner und Dateien der App                                      |
+| 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, wenn persönliche Dateien gespeichert werden                 |
+| 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. zum intelligenten Speichern oder Laden von KI-Modellen |
+
+#### 10. API: Core Motion Framework Fragen beantworten
+
+| Frage                                                         | Antwort                                                                                 |
+| ------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| 1. Wie heisst die API oder Schnittstelle?                     | Core Motion Framework                                                                   |
+| 2. Was kann sie?                                              | Greift auf Bewegungs- und Lagesensoren des Geräts zu                                    |
+| 3. Für welche App-Funktion könnte sie verwendet werden?       | Fitnesstracking (z.B. Schritte tracken), Aktivitäten analysieren, Querformat            |
+| 4. Gibt es sie auf iOS?                                       | Ja                                                                                      |
+| 5. Gibt es sie auf Android?                                   | Nein, aber es gibt ähnliche Sensor-APIs                                                 |
+| 6. Benötigt sie Internet?                                     | Nein                                                                                    |
+| 7. Welche Berechtigungen werden benötigt?                     | Je nach Sensor können Berechtigungen erforderlich sein                                  |
+| 8. Welche Daten verarbeitet sie?                              | Bewegungs- und Sensordaten, z.B. Rotation des Geräts für Querformat oder Beschleunigung |
+| 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, Bewegungsdaten sind persönliche Daten                                               |
+| 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. zur Aktivitätserkennung                                                        |
 
 ---
 
-# 3. Technologien für iOS recherchieren
+## 3. Technologien für iOS recherchieren
 
 Sucht Technologien, mit denen AI-Funktionen auf iOS umgesetzt werden können.
 
 Mögliche Suchbegriffe:
 
-* Swift AI
-* Swift On-Device AI
-* Core ML
-* Apple Intelligence
-* Foundation Models Framework
-* MLX Swift
-* Vision Framework
-* Natural Language Framework
-* Speech Framework
-* Create ML
+- Swift AI
+- Swift On-Device AI
+- Core ML
+- Apple Intelligence
+- Foundation Models Framework
+- MLX Swift
+- Vision Framework
+- Natural Language Framework
+- Speech Framework
+- Create ML
 
-## Fragen zur iOS-Recherche
+### Fragen zur iOS-Recherche
 
 1. Welche AI-Technologien bietet Apple an?
 2. Welche Technologien funktionieren direkt auf dem Gerät?
@@ -413,10 +563,10 @@ Mögliche Suchbegriffe:
 11. Können Modelle von Hugging Face verwendet werden?
 12. Müssen Modelle zuerst konvertiert werden?
 
-## Tabelle für iOS-Technologien
+### Tabelle für iOS-Technologien
 
 | Technologie | Aufgabe | Lokal ausführbar | Programmiersprache | Einschränkungen |
-|-------------|---------|------------------|--------------------|-----------------|
+| ----------- | ------- | ---------------- | ------------------ | --------------- |
 |             |         |                  | Swift              |                 |
 |             |         |                  | Swift              |                 |
 |             |         |                  | Swift              |                 |
@@ -425,24 +575,24 @@ Mögliche Suchbegriffe:
 
 ---
 
-# 4. Technologien für Android recherchieren
+## 4. Technologien für Android recherchieren
 
 Sucht Technologien, mit denen AI-Funktionen auf Android umgesetzt werden können.
 
 Mögliche Suchbegriffe:
 
-* Android On-Device AI
-* Java AI Android
-* LiteRT
-* TensorFlow Lite
-* MediaPipe
-* ML Kit
-* ONNX Runtime Mobile
-* ExecuTorch
-* llama.cpp Android
-* Android Neural Networks API
+- Android On-Device AI
+- Java AI Android
+- LiteRT
+- TensorFlow Lite
+- MediaPipe
+- ML Kit
+- ONNX Runtime Mobile
+- ExecuTorch
+- llama.cpp Android
+- Android Neural Networks API
 
-## Fragen zur Android-Recherche
+### Fragen zur Android-Recherche
 
 1. Welche AI-Technologien gibt es für Android?
 2. Welche Technologien können mit Java verwendet werden?
@@ -457,10 +607,10 @@ Mögliche Suchbegriffe:
 11. Welche Technologien eignen sich für Text?
 12. Welche Technologien eignen sich für Bilder und Sprache?
 
-## Tabelle für Android-Technologien
+### Tabelle für Android-Technologien
 
 | Technologie | Aufgabe | Lokal ausführbar | Mit Java verwendbar | Einschränkungen |
-|-------------|---------|------------------|---------------------|-----------------|
+| ----------- | ------- | ---------------- | ------------------- | --------------- |
 |             |         |                  |                     |                 |
 |             |         |                  |                     |                 |
 |             |         |                  |                     |                 |
@@ -469,29 +619,29 @@ Mögliche Suchbegriffe:
 
 ---
 
-# 5. Interessante AI-Funktionen sammeln
+## 5. Interessante AI-Funktionen sammeln
 
 Sammelt mindestens **15 Funktionen**, die eine AI-App besitzen könnte.
 
 Beispiele:
 
-* Texte zusammenfassen
-* Texte übersetzen
-* Fragen beantworten
-* Texte vereinfachen
-* Notizen sortieren
-* Sprache in Text umwandeln
-* Text vorlesen
-* Objekte in Bildern erkennen
-* Dokumente analysieren
-* Lernfragen erstellen
-* Texte korrigieren
-* Ideen vorschlagen
-* Termine aus Texten erkennen
-* Bilder beschreiben
-* lokale Dateien durchsuchen
+- Texte zusammenfassen
+- Texte übersetzen
+- Fragen beantworten
+- Texte vereinfachen
+- Notizen sortieren
+- Sprache in Text umwandeln
+- Text vorlesen
+- Objekte in Bildern erkennen
+- Dokumente analysieren
+- Lernfragen erstellen
+- Texte korrigieren
+- Ideen vorschlagen
+- Termine aus Texten erkennen
+- Bilder beschreiben
+- lokale Dateien durchsuchen
 
-## Fragen zu jeder Funktion
+### Fragen zu jeder Funktion
 
 1. Was macht die Funktion?
 2. Für wen wäre sie nützlich?
@@ -504,10 +654,10 @@ Beispiele:
 9. Welche Daten verarbeitet die Funktion?
 10. Welche Datenschutzprobleme könnten entstehen?
 
-## Tabelle für mögliche Funktionen
+### Tabelle für mögliche Funktionen
 
 | Nr. | Funktion | Mögliches Modell | Benötigte APIs | Offline möglich | Interesse               |
-|----:|----------|------------------|----------------|-----------------|-------------------------|
+| --: | -------- | ---------------- | -------------- | --------------- | ----------------------- |
 |   1 |          |                  |                |                 | niedrig / mittel / hoch |
 |   2 |          |                  |                |                 | niedrig / mittel / hoch |
 |   3 |          |                  |                |                 | niedrig / mittel / hoch |
@@ -526,11 +676,11 @@ Beispiele:
 
 ---
 
-# 6. On-Device und Cloud vergleichen
+## 6. On-Device und Cloud vergleichen
 
 Untersucht den Unterschied zwischen lokaler AI und AI aus der Cloud.
 
-## Fragen
+### Fragen
 
 1. Was bedeutet On-Device-AI?
 2. Was bedeutet Cloud-AI?
@@ -543,10 +693,10 @@ Untersucht den Unterschied zwischen lokaler AI und AI aus der Cloud.
 9. Welche Variante kann grössere Modelle verwenden?
 10. Welche Variante wäre für ein Schulprojekt geeigneter?
 
-## Vergleich
+### Vergleich
 
 | Thema               | On-Device-AI | Cloud-AI |
-|---------------------|--------------|----------|
+| ------------------- | ------------ | -------- |
 | Internetverbindung  |              |          |
 | Datenschutz         |              |          |
 | Geschwindigkeit     |              |          |
@@ -558,18 +708,18 @@ Untersucht den Unterschied zwischen lokaler AI und AI aus der Cloud.
 
 ---
 
-# 7. Auswahl der interessantesten Ergebnisse
+## 7. Auswahl der interessantesten Ergebnisse
 
 Wählt nach der Recherche eure **fünf interessantesten Ergebnisse** aus.
 
 Das können sein:
 
-* AI-Modelle
-* Technologien
-* APIs
-* Funktionen
-* Frameworks
-* Bibliotheken
+- AI-Modelle
+- Technologien
+- APIs
+- Funktionen
+- Frameworks
+- Bibliotheken
 
 Beantwortet zu jedem Ergebnis:
 
@@ -584,7 +734,7 @@ Beantwortet zu jedem Ergebnis:
 
 ---
 
-# 8. Persönliches Fazit
+## 8. Persönliches Fazit
 
 Beantwortet am Schluss folgende Fragen:
 
@@ -601,30 +751,33 @@ Beantwortet am Schluss folgende Fragen:
 
 ---
 
-# Anforderungen
+## Anforderungen
 
 Die Dokumentation muss mindestens enthalten:
 
-* [ ] 15 recherchierte AI-Modelle
-* [ ] 10 recherchierte APIs oder Schnittstellen
-* [ ] 5 iOS-Technologien
-* [ ] 5 Android-Technologien
-* [ ] 15 mögliche AI-Funktionen
-* [ ] einen Vergleich zwischen On-Device-AI und Cloud-AI
-* [ ] fünf besonders interessante Ergebnisse
-* [ ] ein persönliches Fazit
-* [ ] Quellen und Links zu den gefundenen Informationen
+- [ ] 15 recherchierte AI-Modelle
+- [ ] 10 recherchierte APIs oder Schnittstellen
+- [ ] 5 iOS-Technologien
+- [ ] 5 Android-Technologien
+- [ ] 15 mögliche AI-Funktionen
+- [ ] einen Vergleich zwischen On-Device-AI und Cloud-AI
+- [ ] fünf besonders interessante Ergebnisse
+- [ ] ein persönliches Fazit
+- [ ] Quellen und Links zu den gefundenen Informationen
 
 ---
 
-# Wichtig
+## Wichtig
 
-* Es muss noch keine feste Projektidee ausgewählt werden.
-* Es muss noch keine App programmiert werden.
-* Ihr dürft verschiedene AI-Bereiche untersuchen.
-* Die Recherche darf nicht nur auf Hugging Face stattfinden.
-* Schreibt die Informationen in eigenen Worten.
-* Gebt bei allen wichtigen Informationen die Quelle an.
-* Achtet auf Modellgrösse, Lizenz, Datenschutz und Geräteanforderungen.
-* Überlegt immer, ob eine Technologie auf iOS und Android verwendet werden könnte.
+- Es muss noch keine feste Projektidee ausgewählt werden.
+- Es muss noch keine App programmiert werden.
+- Ihr dürft verschiedene AI-Bereiche untersuchen.
+- Die Recherche darf nicht nur auf Hugging Face stattfinden.
+- Schreibt die Informationen in eigenen Worten.
+- Gebt bei allen wichtigen Informationen die Quelle an.
+- Achtet auf Modellgrösse, Lizenz, Datenschutz und Geräteanforderungen.
+- Überlegt immer, ob eine Technologie auf iOS und Android verwendet werden
+  könnte.
+
+```text
 ```
