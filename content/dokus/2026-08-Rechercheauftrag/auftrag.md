@@ -692,23 +692,248 @@ Beispiele:
 
 ### Tabelle für mögliche Funktionen
 
-| Nr. | Funktion | Mögliches Modell | Benötigte APIs | Offline möglich | Interesse               |
-| --: | -------- | ---------------- | -------------- | --------------- | ----------------------- |
-|   1 |          |                  |                |                 | niedrig / mittel / hoch |
-|   2 |          |                  |                |                 | niedrig / mittel / hoch |
-|   3 |          |                  |                |                 | niedrig / mittel / hoch |
-|   4 |          |                  |                |                 | niedrig / mittel / hoch |
-|   5 |          |                  |                |                 | niedrig / mittel / hoch |
-|   6 |          |                  |                |                 | niedrig / mittel / hoch |
-|   7 |          |                  |                |                 | niedrig / mittel / hoch |
-|   8 |          |                  |                |                 | niedrig / mittel / hoch |
-|   9 |          |                  |                |                 | niedrig / mittel / hoch |
-|  10 |          |                  |                |                 | niedrig / mittel / hoch |
-|  11 |          |                  |                |                 | niedrig / mittel / hoch |
-|  12 |          |                  |                |                 | niedrig / mittel / hoch |
-|  13 |          |                  |                |                 | niedrig / mittel / hoch |
-|  14 |          |                  |                |                 | niedrig / mittel / hoch |
-|  15 |          |                  |                |                 | niedrig / mittel / hoch |
+| Nr. | Funktion                      | Mögliches Modell          | Benötigte APIs        | Offline möglich | Interesse |
+| --: | ----------------------------- | ------------------------- | --------------------- | --------------- | --------- |
+|   1 | Texte zusammenfassen          | BART, T5                  | Dateisystem           | Ja              | hoch      |
+|   2 | Texte übersetzen              | NLLB-200                  | Dateisystem           | Ja              | mittel    |
+|   3 | Fragen beantworten            | Instella-MoE              | Dateisystem           | Ja              | hoch      |
+|   4 | Texte korrigieren             | T5                        | Dateisystem           | Ja              | mittel    |
+|   5 | Texte vereinfachen            | T5                        | Dateisystem           | Ja              | mittel    |
+|   6 | Sprache in Text umwandeln     | Whisper, Speech T5        | Mikrofon              | Ja              | hoch      |
+|   7 | Text vorlesen                 | SpeechT5                  | Lautsprecher          | Ja              | mittel    |
+|   8 | Bilder beschreiben            | BLIP                      | Kamera, Bildergalerie | Ja              | hoch      |
+|   9 | Dokumente analysieren         | Donut                     | Kamera, Bildergalerie | Ja              | hoch      |
+|  10 | Objekte in Bildern erkennen   | Vision-Modell (z.B. YOLO) | Kamera                | Ja              | mittel    |
+|  11 | Notizen automatisch sortieren | BGE                       | Dateisystem           | Ja              | mittel    |
+|  12 | Lernfragen erstellen          | Instella-MoE              | Dateisystem           | Ja              | hoch      |
+|  13 | Ideen vorschlagen             | Instella-MoE              | Dateisystem           | Ja              | mittel    |
+|  14 | Termine aus Text erkennen     | Natural Language Modell   | Kalender              | Ja              | hoch      |
+|  15 | Lokale Dateien durchsuchen    | BGE                       | Dateisystem           | Ja              | hoch      |
+
+### 1. Funktion: (Texte zusammenfassen) Fragen beantworten
+
+| Frage                                               | Antwort                                             |
+| --------------------------------------------------- | --------------------------------------------------- |
+| 1. Was macht die Funktion?                          | Erstellt eine Zusammenfassung eines längeren Textes |
+| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Lernende und Berufstätige.    |
+| 3. Welches Problem löst sie?                        | Spart Zeit beim Lesen eines langen Textes           |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | BART oder T5                                        |
+| 5. Welche APIs werden benötigt?                     | Keine, eventuell ein Dateisystem                    |
+| 6. Funktioniert sie offline?                        | Ja (lokales Modell)                                 |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                  |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel                                              |
+| 9. Welche Daten verarbeitet die Funktion?           | Texte                                               |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Vertrauliche Texte könnten verarbeitet werden       |
+
+### 2. Funktion: (Texte übersetzen) Fragen beantworten
+
+| Frage                                               | Antwort                                                                        |
+| --------------------------------------------------- | ------------------------------------------------------------------------------ |
+| 1. Was macht die Funktion?                          | Übersetzt Texte automatisch in eine andere Sprache                             |
+| 2. Für wen wäre sie nützlich?                       | Reisende, Touristen, Schüler, Berufstätige                                     |
+| 3. Welches Problem löst sie?                        | Missverständnisse, schwierige Kommunikation                                    |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | NLLB-200 oder M2M100                                                           |
+| 5. Welche APIs werden benötigt?                     | Keine, eventuell Mikrofon für die Spracheingabe                                |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen übersetzungsmodell                                       |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                             |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel                                                                         |
+| 9. Welche Daten verarbeitet die Funktion?           | Texte und Sprachen                                                             |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Wenn private Texte übersetzt werden und diese sensible Informationen enthalten |
+
+### 3. Funktion: (Fragen beantworten) Fragen beantworten
+
+| Frage                                               | Antwort                                                    |
+| --------------------------------------------------- | ---------------------------------------------------------- |
+| 1. Was macht die Funktion?                          | Beantwortet Fragen des Benutzers mithilfe einer KI         |
+| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Lernende und Berufstätige            |
+| 3. Welches Problem löst sie?                        | Liefert schnell Informationen und Antworten                |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | Instella-MoE oder andere Sprachmodelle                     |
+| 5. Welche APIs werden benötigt?                     | Keine, optional Mikrofon für Spracheingabe                 |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                               |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                         |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel bis hoch                                            |
+| 9. Welche Daten verarbeitet die Funktion?           | Texteingaben des Benutzers                                 |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Persönliche oder sensible Texte könnten verarbeitet werden |
+
+### 4. Funktion: (Texte korrigieren) Fragen beantworten
+
+| Frage                                               | Antwort                                                  |
+| --------------------------------------------------- | -------------------------------------------------------- |
+| 1. Was macht die Funktion?                          | Korrigiert Rechtschreibung und Grammatik in Texten       |
+| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Lernende und Berufstätige          |
+| 3. Welches Problem löst sie?                        | Verhindert Fehler und verbessert die Qualität des Textes |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | T5 oder ein Sprachmodell (LLM)                           |
+| 5. Welche APIs werden benötigt?                     | Keine                                                    |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                             |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                       |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel                                                   |
+| 9. Welche Daten verarbeitet die Funktion?           | Texte des Benutzers                                      |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Wenn private oder sensible Texte verarbeitet werden      |
+
+### 5. Funktion: (Texte vereinfachen) Fragen beantworten
+
+| Frage                                               | Antwort                                                         |
+| --------------------------------------------------- | --------------------------------------------------------------- |
+| 1. Was macht die Funktion?                          | Vereinfacht komplexe Texte und macht sie verständlicher         |
+| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Lernende und Berufstätige                 |
+| 3. Welches Problem löst sie?                        | Spart Zeit und erleichtert das Verstehen von schwierigen Texten |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | T5 oder ein Sprachmodell (LLM)                                  |
+| 5. Welche APIs werden benötigt?                     | Keine                                                           |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                                    |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                              |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel                                                          |
+| 9. Welche Daten verarbeitet die Funktion?           | Texte des Benutzers                                             |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Wenn private oder vertrauliche Texte verarbeitet werden         |
+
+### 6. Funktion: (Sprache in Text umwandeln) Fragen beantworten
+
+| Frage                                               | Antwort                                                                        |
+| --------------------------------------------------- | ------------------------------------------------------------------------------ |
+| 1. Was macht die Funktion?                          | Wandelt gesprochene Sprache automatisch in Text um                             |
+| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Berufstätige und Personen, die Notizen aufnehmen möchten |
+| 3. Welches Problem löst sie?                        | Schnelleres Schreiben und Aufnehmen von Informationen                          |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | Whisper oder SpeechT5                                                          |
+| 5. Welche APIs werden benötigt?                     | Mikrofon API                                                                   |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Sprachmodell                                             |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                             |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel                                                                         |
+| 9. Welche Daten verarbeitet die Funktion?           | Audiodaten und Sprache                                                         |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Sprachaufnahmen könnten persönliche oder sensible Informationen enthalten      |
+
+### 7. Funktion: (Text vorlesen) Fragen beantworten
+
+| Frage                                               | Antwort                                                      |
+| --------------------------------------------------- | ------------------------------------------------------------ |
+| 1. Was macht die Funktion?                          | Liest geschriebenen Text automatisch vor                     |
+| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Lernende und Personen mit Sehproblemen |
+| 3. Welches Problem löst sie?                        | Ermöglicht das Anhören von Texten ohne lesen zu müssen       |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | SpeechT5 oder andere Text-To-Speech-Modelle                  |
+| 5. Welche APIs werden benötigt?                     | Text-to-Speech API und Lautsprecher                          |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Sprachmodell                           |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                           |
+| 8. Wie schwierig wäre die Umsetzung?                | Einfach bis mittel                                           |
+| 9. Welche Daten verarbeitet die Funktion?           | Texte und erzeugte Audiodaten                                |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Es könnten private Texte vorgelesen oder verarbeitet werden  |
+
+### 8. Funktion: (Bilder beschreiben) Fragen beantworten
+
+| Frage                                               | Antwort                                                            |
+| --------------------------------------------------- | ------------------------------------------------------------------ |
+| 1. Was macht die Funktion?                          | Beschreibt den Inhalt von einem Bild automatisch                   |
+| 2. Für wen wäre sie nützlich?                       | Personen mit Sehproblemen, Schüler und Nutzer von Bildanalyse-Apps |
+| 3. Welches Problem löst sie?                        | Macht Bildinhalte verständlicher und zugänglicher                  |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | BLIP oder ähnliche Vision-Language-Modelle                         |
+| 5. Welche APIs werden benötigt?                     | Kamera API und Bildergalerie API                                   |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                                       |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                 |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel                                                             |
+| 9. Welche Daten verarbeitet die Funktion?           | Bilder und Bildinformationen                                       |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Bilder könnten persönliche oder sensible Informationen enthalten   |
+
+### 9. Funktion: (Dokumente analysieren) Fragen beantworten
+
+| Frage                                               | Antwort                                                             |
+| --------------------------------------------------- | ------------------------------------------------------------------- |
+| 1. Was macht die Funktion?                          | Analysiert Dokumente und erkennt wichtige Informationen             |
+| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Berufstätige und Unternehmen                  |
+| 3. Welches Problem löst sie?                        | Spart Zeit bei der Suche und Verarbeitung von Informationen         |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | Donut oder andere Dokumenten KI Modelle                             |
+| 5. Welche APIs werden benötigt?                     | Kamera API und Dateisystem API                                      |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                                        |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                  |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel bis hoch                                                     |
+| 9. Welche Daten verarbeitet die Funktion?           | Dokumente, Bilder und Texte                                         |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Dokumente können persönliche oder sensible Informationen beinhalten |
+
+### 10. Funktion: (Objekte in Bildern erkennen) Fragen beantworten
+
+| Frage                                               | Antwort                                                        |
+| --------------------------------------------------- | -------------------------------------------------------------- |
+| 1. Was macht die Funktion?                          | Erkennt automatisch Objekte auf Bildern                        |
+| 2. Für wen wäre sie nützlich?                       | Nutzer von Kamera Apps, Lernende und Personen mit Sehproblemen |
+| 3. Welches Problem löst sie?                        | Hilft dabei, unbekannte Objekte schnell erkennen zu können     |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | YOLO oder andere Objekterkennungsmodelle                       |
+| 5. Welche APIs werden benötigt?                     | Kamera API                                                     |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                                   |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                             |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel                                                         |
+| 9. Welche Daten verarbeitet die Funktion?           | Bilder und Kameradaten                                         |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Bilder können Personen oder sensible Informationen beinhalten  |
+
+### 11. Funktion: (Notizen automatisch sortieren) Fragen beantworten
+
+| Frage                                               | Antwort                                                                                              |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| 1. Was macht die Funktion?                          | Sortiert Notizen automatisch nach Themen oder Kategorien                                             |
+| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Lernende und Berufstätige                                                      |
+| 3. Welches Problem löst sie?                        | Hilft beim Organisieren grosser Mengen an Notizen und man findet dadurch die Informationen schneller |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | BGE oder ein Sprachmodell (LLM)                                                                      |
+| 5. Welche APIs werden benötigt?                     | Dateisystem API (optional, also nicht zwigend nötig)                                                 |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                                                                         |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                                                   |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel                                                                                               |
+| 9. Welche Daten verarbeitet die Funktion?           | Texte aus Notizen                                                                                    |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Die Notizen könnten private oder sensible Informationen enthalten                                    |
+
+### 12. Funktion: (Lernfragen erstellen) Fragen beantworten
+
+| Frage                                               | Antwort                                                                        |
+| --------------------------------------------------- | ------------------------------------------------------------------------------ |
+| 1. Was macht die Funktion?                          | Erstellt automatisch Fragen aus Lernmaterialien                                |
+| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende und Lernende                                              |
+| 3. Welches Problem löst sie?                        | Relevante Fragen zu erstellen um die Vorbereitung einer Prüfung zu erleichtern |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | T5 oder ein Sprachmodell (LLM)                                                 |
+| 5. Welche APIs werden benötigt?                     | Keine, eventuell ein Dateisystem für Lernmaterialien                           |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                                                   |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                             |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel                                                                         |
+| 9. Welche Daten verarbeitet die Funktion?           | Texte und Lernmaterialien                                                      |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Es könnten private Lernunterlagen verarbeitet werden                           |
+
+### 13. Funktion: (Ideen vorschlagen) Fragen beantworten
+
+| Frage                                               | Antwort                                                                       |
+| --------------------------------------------------- | ----------------------------------------------------------------------------- |
+| 1. Was macht die Funktion?                          | Generiert neue Ideen oder Vorschläge basierend auf die Eingaben des Benutzers |
+| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Kreative und Berufstätige                               |
+| 3. Welches Problem löst sie?                        | Hilft bei Ideen und fördert die Kreativität                                   |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | Instella-MoE oder andere Sprachmodelle (LLMs)                                 |
+| 5. Welche APIs werden benötigt?                     | Keine                                                                         |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                                                  |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                            |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel                                                                        |
+| 9. Welche Daten verarbeitet die Funktion?           | Texteingaben des Nutzers                                                      |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Persönliche Ideen oder sensible Informationen könnten verarbeitet werden      |
+
+### 14. Funktion: (Termine aus Texten erkennen) Fragen beantworten
+
+| Frage                                               | Antwort                                                                       |
+| --------------------------------------------------- | ----------------------------------------------------------------------------- |
+| 1. Was macht die Funktion?                          | Erkennt automatisch Termine und Zeitangaben in Texten                         |
+| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Lernende, Berufstätige und Personen mit vielen Terminen |
+| 3. Welches Problem löst sie?                        | Um Termine schneller erstellen zu können und diese auch nicht zu vergessen    |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | Natural Language Modell oder ein Sprachmodell (LLM)                           |
+| 5. Welche APIs werden benötigt?                     | Kalender API                                                                  |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                                                  |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                            |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel                                                                        |
+| 9. Welche Daten verarbeitet die Funktion?           | Texte, Datumsangaben und Uhrzeiten                                            |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Kalenderinformationen könnten vertrauliche Informationen beinhalten           |
+
+### 15. Funktion: (Lokale Dateien durchsuchen) Fragen beantworten
+
+| Frage                                               | Antwort                                                                            |
+| --------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| 1. Was macht die Funktion?                          | Durchsucht lokale Dateien nach bestimmten Informationen                            |
+| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Berufstätige und Unternehmen                                 |
+| 3. Welches Problem löst sie?                        | Erleichtert das Finden von Informationen in Dateien und spart dementsprechend Zeit |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | BGE oder ein Sprachmodell (LLM)                                                    |
+| 5. Welche APIs werden benötigt?                     | Dateisystem API                                                                    |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                                                       |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                                 |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel bis hoch                                                                    |
+| 9. Welche Daten verarbeitet die Funktion?           | Lokale Dateien und Dokumente                                                       |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Dateien können persönliche oder vertrauliche Informationen beinhalten              |
 
 ---
 
@@ -792,9 +1017,9 @@ Beantwortet am Schluss folgende Fragen:
 Die Dokumentation muss mindestens enthalten:
 
 - [ ] 15 recherchierte AI-Modelle
-- [ ] 10 recherchierte APIs oder Schnittstellen
-- [ ] 5 iOS-Technologien
-- [ ] 5 Android-Technologien
+- [x] 10 recherchierte APIs oder Schnittstellen
+- [x] 5 iOS-Technologien
+- [x] 5 Android-Technologien
 - [ ] 15 mögliche AI-Funktionen
 - [ ] einen Vergleich zwischen On-Device-AI und Cloud-AI
 - [ ] fünf besonders interessante Ergebnisse
