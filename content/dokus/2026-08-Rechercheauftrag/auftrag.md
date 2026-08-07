@@ -565,13 +565,30 @@ Mögliche Suchbegriffe:
 
 ### Tabelle für iOS-Technologien
 
-| Technologie | Aufgabe | Lokal ausführbar | Programmiersprache | Einschränkungen |
-| ----------- | ------- | ---------------- | ------------------ | --------------- |
-|             |         |                  | Swift              |                 |
-|             |         |                  | Swift              |                 |
-|             |         |                  | Swift              |                 |
-|             |         |                  | Swift              |                 |
-|             |         |                  | Swift              |                 |
+| Technologie                | Aufgabe                                                                                                 | Lokal ausführbar | Programmiersprache | Einschränkungen                                                                          |
+| -------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | ---------------------------------------------------------------------------------------- |
+| CoreML                     | Ausführen von Machine-Learning-Modellen direkt auf dem Gerät                                            | Ja               | Swift              | Modelle müssen meistens in das CoreML Format konvertiert werden                          |
+| Vision Framework           | Bildanalyse, Bilderkennung, Texterkennung und Erkennung von Objekten oder Gesichtern                    | Ja               | Swift              | Unter nur bestimmte Bildverarbeitungsaufgaben (komplexere Modelle benötigen oft Core ML) |
+| Apple Intelligence         | KI-Funktionen wie Textverständnis, Zusammenfassungen, Schreibunterstützung und Bildfunktionen ausführen | Teilweise        | Swift              | Benötigt unterstützte Geräte und aktuelle Betriebssysteme                                |
+| Natural Language Framework | Textanalyse, Spracherkennung, Klassifikation und Analyse von Texten                                     | Ja               | Swift              | Bietet fertige Sprachfunktionen (komplexere Sprachmodelle benötigen oft Core ML)         |
+| Create ML                  | Erstellen und Trainieren eigener Machine-Learning-Modelle für Apple Plattformen                         | Ja               | Swift              | Benötigt Trainingsdaten (Modelle sind meist für bestimmte Aufgaben spezialisiert)        |
+
+### Fragen zur iOS-Recherche beantworten
+
+| Frage                                                      | Antwort                                                                                                                                                                    |
+| ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Welche AI-Technologien bietet Apple an?                 | Apple bietet Technologien wie CoreML, Vision Framework, Swift On-Device AI, Apple Intelligence und viele mehr an.                                                          |
+| 2. Welche Technologien funktionieren direkt auf dem Gerät? | CoreML, Vision, Natural Language und Speech können direkt auf dem Gerät verwendet werden.                                                                                  |
+| 3. Welche Modellformate werden unterstützt?                | Vor allem das Core ML Format (.mlmodel, .mlpackage). Andere müssen oft konvertiert werden.                                                                                 |
+| 4. Wie kann ein Modell in Swift verwendet werden?          | Modelle werden in Xcode eingebunden und über Swift-APIs der jeweilgen Technologie verwendet.                                                                               |
+| 5. Welche Technologien unterstützen Text?                  | Natural Language Framework, Speech Framework und Core ML.                                                                                                                  |
+| 6. Welche Technologien unterstützen Bilder?                | Vision Framework, Core ML und Create ML.                                                                                                                                   |
+| 7. Welche Technologien unterstützen Sprache?               | Speech Framework, Natural Language Framework und Core ML.                                                                                                                  |
+| 8. Welche Geräte werden benötigt?                          | Unterstütztes iPhone, iPad oder Mac mit aktueller Version des Betriebssystems.                                                                                             |
+| 9. Welche iOS-Version wird benötigt?                       | Je nach Technologie unterschiedlich, viele Frameworks kann man ab iOS 11 verwenden.                                                                                        |
+| 10. Welche Einschränkungen gibt es?                        | Nicht alle KI-Modelle können direkt verwendet werden. Manche Modelle müssen konvertiert werden. Andere sind grössere Modelle und die benötigen ein leistungsfähiges Gerät. |
+| 11. Können Modelle von Hugging Face verwendet werden?      | Ja, viele Modelle können verwendet werden                                                                                                                                  |
+| 12. Müssen Modelle zuerst konvertiert werden?              | Meistens ja, wenn sie nicht bereits als Core ML Modell (.mlmodel) vorhanden sind                                                                                           |
 
 ---
 
@@ -609,13 +626,32 @@ Mögliche Suchbegriffe:
 
 ### Tabelle für Android-Technologien
 
-| Technologie | Aufgabe | Lokal ausführbar | Mit Java verwendbar | Einschränkungen |
-| ----------- | ------- | ---------------- | ------------------- | --------------- |
-|             |         |                  |                     |                 |
-|             |         |                  |                     |                 |
-|             |         |                  |                     |                 |
-|             |         |                  |                     |                 |
-|             |         |                  |                     |                 |
+| Technologie         | Aufgabe                                                                                 | Lokal ausführbar      | Mit Java verwendbar | Einschränkungen                                                   |
+| ------------------- | --------------------------------------------------------------------------------------- | --------------------- | ------------------- | ----------------------------------------------------------------- |
+| ML Kit              | Texterkennung, Barcode-Scanner, Gesichtserkennung usw.                                  | Ja (viele Funktionen) | Ja                  | Nicht alle Funktionen sind offline verfügbar                      |
+| MediaPipe           | Verarbeitung von Bildern, Videos und Audio (z.B. für eine Hand- oder Gesichtserkennung) | Ja                    | Ja (eingeschränkt)  | Funktionsrate verschlechtert sich bei verschiedenen Verhältnissen |
+| ExecuTorch          | Führt PyTorch-Modelle auf dem Gerät effizient aus                                       | Ja                    | Ja                  | Unterstützt hauptsächlich PyTorch Modelle                         |
+| LiteRT              | Führt KI-Modelle auf dem Android Gerät aus                                              | Ja                    | Ja (eingeschränkt)  | Modelle müssen im LiteRT-/TensorFlow-Lite-Format vorliegen        |
+| ONNX Runtime Mobile | Führt ONNX-KI-Modelle lokal auf Android Geräten aus                                     | Ja                    | Ja                  | Unterstützt nur Modelle im ONNX-Format                            |
+
+### Fragen zur iOS-Recherche beantworten
+
+### Fragen zur Android-Recherche beantworten
+
+| Frage                                                       | Antwort                                                                                                          |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| 1. Welche AI-Technologien gibt es für Android?              | ML Kit, LiteRT (TensorFlow Lite), MediaPipe, ONNX Runtime Mobile und ExecuTorch.                                 |
+| 2. Welche Technologien können mit Java verwendet werden?    | LiteRT (über Java API), ML Kit und ONNX Runtime Mobile. MediaPipe unterstützt Java nur eingeschränkt.            |
+| 3. Welche Modelle können lokal ausgeführt werden?           | TensorFlow-Lite-, ONNX- und PyTorch-Modelle sowie die in ML Kit integrierten Modelle.                            |
+| 4. Welche Modellformate werden unterstützt?                 | ".tflite", ".onnx" und PyTorch-Modelle                                                                           |
+| 5. Können GPU oder NPU verwendet werden?                    | Ja, viele Technologien unterstützen GPU oder NPU zur Beschleunigung der KI-Berechnungen                          |
+| 6. Welche Android-Versionen werden unterstützt?             | Je nach Technologie unterschiedlich, viele unterstützen Android 5.0 oder neuer                                   |
+| 7. Welche Geräteanforderungen gibt es?                      | Ein Android Gerät mit ausreichend Arbeitsspeicher (bzw. RAM) und Rechenleistung                                  |
+| 8. Welche Unterschiede gibt es zwischen Android-Geräten?    | Prozessor, Arbeitsspeicher und Hardwarebeschleunigung (GPU/NPU) unterscheiden sich je nach Gerät                 |
+| 9. Können Modelle von Hugging Face verwendet werden?        | Ja, viele Modelle können benutzt werden, aber einige müssen jedoch in ein unterstützes Format konvertiert werden |
+| 10. Müssen Modelle zuerst konvertiert werden?               | Oft ja, z.B. in das TensorFlow-Lite- oder ONNX-Format                                                            |
+| 11. Welche Technologien eignen sich für Text?               | LiteRT, ML Kit, ONNX Runtime Mobile und ExecuTorch                                                               |
+| 12. Welche Technologien eignen sich für Bilder und Sprache? | LiteRT, ML Kit, MediaPipe und ExecuTorch                                                                         |
 
 ---
 
