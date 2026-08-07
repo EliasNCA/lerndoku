@@ -956,16 +956,33 @@ Untersucht den Unterschied zwischen lokaler AI und AI aus der Cloud.
 
 ### Vergleich
 
-| Thema               | On-Device-AI | Cloud-AI |
-| ------------------- | ------------ | -------- |
-| Internetverbindung  |              |          |
-| Datenschutz         |              |          |
-| Geschwindigkeit     |              |          |
-| Modellgrösse        |              |          |
-| Kosten              |              |          |
-| Geräteanforderungen |              |          |
-| Offline-Nutzung     |              |          |
-| Entwicklungsaufwand |              |          |
+| Thema               | On-Device-AI                                                                                 | Cloud-AI                                                                                                      |
+| ------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Internetverbindung  | Nicht erforderlich                                                                           | Erforderlich                                                                                                  |
+| Datenschutz         | Hoch, da die Daten lokal verarbeitet werden                                                  | Geringer, da Daten an einen Cloud-Server gesendet werden                                                      |
+| Geschwindigkeit     | Meistens schneller, da die Daten nicht über das Internet gesendet werden müssen              | Abhängig von der Internetverbindung                                                                           |
+| Modellgrösse        | Eher kleinere Modelle                                                                        | Auch sehr grosse Modelle möglich, da Cloud-Server in der Regel mehr Arbeitsspeicher und Speicherplatz bieten. |
+| Kosten              | Keine laufenden Cloud-Kosten                                                                 | Laufende Kosten für Cloud-Server (mehr Kosten)                                                                |
+| Geräteanforderungen | Höhere Anforderungen an Speicher und Rechenleistung, da das KI-Modell lokal ausgeführt wird. | Geringere Anforderungen für das Gerät, da die Verarbeitung über den Cloud-Server erfolgt                      |
+| Offline-Nutzung     | Ja                                                                                           | Nein                                                                                                          |
+| Entwicklungsaufwand | Höher (Modelloptimierung für mobile Geräte)                                                  | Eher geringer (Server übernimmt die Verarbeitung)                                                             |
+
+### Fragen beantworten (On-Device-AI und Cloud-AI)
+
+### Fragen zu On-Device-AI und Cloud-AI
+
+| Frage                                                           | Antwort                                                                                                                                                              |
+| --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Was bedeutet On-Device-AI?                                   | Bedeutet, dass das Handy, der Computer oder die Smartwatch alles lokal verarbeitet, ohne Daten über das Internet an einen Cloud-Server zu senden.                    |
+| 2. Was bedeutet Cloud-AI?                                       | Die KI verarbeitet Daten auf einem Cloud-Server statt direkt auf einem Gerät. (Daten werden über das Internet gesendet und das Ergebnis danach zurückgeschickt.)     |
+| 3. Welche Variante benötigt Internet?                           | Die Cloud-AI benötigt eine Internetverbindung, da die Daten auf einem Cloud-Server verarbeitet werden. Die On-Device-AI funktioniert auch ohne Internet.             |
+| 4. Welche Variante schützt persönliche Daten besser?            | Die On-Device-AI schützt persönliche Daten besser, da die Daten nur lokal auf dem Gerät verarbeitet werden.                                                          |
+| 5. Welche Variante ist schneller?                               | Die On-Device-AI ist meistens schneller, da die Verarbeitung der Daten nicht über das Internet erfolgt.                                                              |
+| 6. Welche Variante benötigt mehr Speicherplatz auf dem Gerät?   | Die On-Device-AI benötigt mehr Speicherplatz, da das KI-Modell lokal auf dem Gerät gespeichert und ausgeführt wird.                                                  |
+| 7. Welche Variante verursacht laufende Kosten?                  | Die Cloud-AI-Variante verursacht laufende Kosten, da für den Betrieb und die Nutzung von Cloud-Servern bezahlt werden muss.                                          |
+| 8. Welche Variante funktioniert auf älteren Smartphones besser? | Die Cloud-AI-Variante funktioniert auf älteren Smartphones besser, da die Verarbeitung auf einem Cloud-Server erfolgt und das Gerät dadurch weniger belastet wird.   |
+| 9. Welche Variante kann grössere Modelle verwenden?             | Die Cloud-AI-Variante kann grössere Modelle verwenden, da Cloud-Server in der Regel über deutlich mehr Arbeitsspeicher und Speicherplatz verfügen als mobile Geräte. |
+| 10. Welche Variante wäre für ein Schulprojekt geeigneter?       | Die On-Device-AI wäre für ein Schulprojekt geeigneter, da sie keine laufenden Cloud-Kosten verursacht und persönliche Daten besser schützt.                          |
 
 ---
 
