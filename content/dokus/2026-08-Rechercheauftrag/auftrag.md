@@ -104,23 +104,23 @@ Beantwortet zu jedem gefundenen Modell kurz folgende Fragen:
 
 ### Tabelle für die Modelle
 
-| Nr. | Modell                     | Aufgabe                                  | Grösse                                   | Offline möglich | Smartphone geeignet   | Quelle                          |
-| --: | -------------------------- | ---------------------------------------- | ---------------------------------------- | --------------- | --------------------- | ------------------------------- |
-|   1 | Instella-MoE-16B-A3B-Think | Textgenerierung, Chatbot, Reasoning      | 16B Parameter (2,8B aktiv)               | Ja              | Eher nein             | Hugging Face (AMD)              |
-|   2 | Fine-Tuned T5 Small        | Textezusammenfassung                     | ca. 242 MB                               | Ja              | Ja                    | Hugging Face (Falcons.ai)       |
-|   3 | NLLB-200 Distilled 600M    | Textübersetzung                          | 600 Mio. Parameter (circa 2,5 GB)        | Ja              | Eher nein             | Hugging Face (Meta AI)          |
-|   4 | VGGish                     | Audioanalyse und Geräuscherkennung       | ca. 275 MB                               | Ja              | Ja                    | Kaggle Models (Google)          |
-|   5 | BGE                        | Text-Embeddings und Suche                | Je nach Version, z.B. 33,4 Mio Parameter | Ja              | Ja (kleine Versionen) | Kaggle Models (Keras)           |
-|   6 | Diffusion Gemma            | Textgenerierung mit Diffusionsverfahren  | 25.2 Mrd. Parameter (3.8 Mrd aktiv)      | Ja              | Eher nein             | Kaggle Models (Google DeepMind) |
-|   7 | segmentation-3.0           | Sprechererkennung und Audiosegmentierung | ca. 6 MB                                 | Ja              | Ja                    | Hugging Face (pyannote)         |
-|   8 | Donut-Base                 | Dokumentanalyse                          | 200 Mio. Parameter, 800 MB               | Ja              | Ja                    | Hugging Face (naver-clova-ix)   |
-|   9 | Blip-image-captioning-base | Bildbeschreibung                         | 247 Mio. Parameter, 990 MB               | Ja              | Ja                    | Hugging Face (Saleforce)        |
-|  10 | SpeechT5_tts               | Text-zu-Sprache                          | 144 Mio. Parameter, 586 MB               | Ja              | Ja                    | Hugging Face (Microsoft)        |
-|  11 |                            |                                          |                                          |                 |                       |                                 |
-|  12 |                            |                                          |                                          |                 |                       |                                 |
-|  13 |                            |                                          |                                          |                 |                       |                                 |
-|  14 |                            |                                          |                                          |                 |                       |                                 |
-|  15 |                            |                                          |                                          |                 |                       |                                 |
+| Nr. | Modell                     | Aufgabe                                  | Grösse                                    | Offline möglich | Smartphone geeignet   | Quelle                          |
+| --: | -------------------------- | ---------------------------------------- | ----------------------------------------- | --------------- | --------------------- | ------------------------------- |
+|   1 | Instella-MoE-16B-A3B-Think | Textgenerierung, Chatbot, Reasoning      | 16B Parameter (2,8B aktiv)                | Ja              | Eher nein             | Hugging Face (AMD)              |
+|   2 | Fine-Tuned T5 Small        | Textzusammenfassung                      | ca. 242 MB                                | Ja              | Ja                    | Hugging Face (Falcons.ai)       |
+|   3 | NLLB-200 Distilled 600M    | Textübersetzung                          | 600 Mio. Parameter (circa 2,5 GB)         | Ja              | Eher nein             | Hugging Face (Meta AI)          |
+|   4 | VGGish                     | Audioanalyse und Geräuscherkennung       | ca. 275 MB                                | Ja              | Ja                    | Kaggle Models (Google)          |
+|   5 | BGE                        | Text-Embeddings und Suche                | Je nach Version, z.B. 33,4 Mio. Parameter | Ja              | Ja (kleine Versionen) | Kaggle Models (Keras)           |
+|   6 | Diffusion Gemma            | Textgenerierung mit Diffusionsverfahren  | 25,2 Mrd. Parameter (3.8 Mrd aktiv)       | Ja              | Eher nein             | Kaggle Models (Google DeepMind) |
+|   7 | segmentation-3.0           | Sprechererkennung und Audiosegmentierung | ca. 6 MB                                  | Ja              | Ja                    | Hugging Face (pyannote)         |
+|   8 | Donut-Base                 | Dokumentanalyse                          | 200 Mio. Parameter, 800 MB                | Ja              | Ja                    | Hugging Face (naver-clova-ix)   |
+|   9 | Blip-image-captioning-base | Bildbeschreibung                         | 247 Mio. Parameter, 990 MB                | Ja              | Ja                    | Hugging Face (Salesforce)       |
+|  10 | SpeechT5_tts               | Text-zu-Sprache                          | 144 Mio. Parameter, 540 MB                | Ja              | Ja                    | Hugging Face (Microsoft)        |
+|  11 |                            |                                          |                                           |                 |                       |                                 |
+|  12 |                            |                                          |                                           |                 |                       |                                 |
+|  13 |                            |                                          |                                           |                 |                       |                                 |
+|  14 |                            |                                          |                                           |                 |                       |                                 |
+|  15 |                            |                                          |                                           |                 |                       |                                 |
 
 #### 1. Modell: Instella-MoE-16B-A3B-Think Fragen beantworten
 
@@ -136,7 +136,7 @@ Beantwortet zu jedem gefundenen Modell kurz folgende Fragen:
 | 8. Welche Sprachen unterstützt es?                   | Hauptsächlich Englisch.                                                                                                      |
 | 9. Wie gross ist das Modell?                         | 16 Milliarden Parameter.                                                                                                     |
 | 10. Kann es ohne Internet verwendet werden?          | Ja, nach dem Herunterladen.                                                                                                  |
-| 11. Könnte es auf einem Smartphone laufen?           | Eher nein, da es zu gross ist.                                                                                               |
+| 11. Könnte es auf einem Smartphone laufen?           | Auf normalen Smartphones eher ungeeignet. Mit starker Quantisierung und zukünftiger Hardware eventuell möglich.              |
 | 12. Gibt es eine kleinere oder quantisierte Version? | Nein. Es gibt verschiedene Trainingsstufen (Pretrain, Base, SFT, DPO, Think), aber keine kleinere oder quantisierte Version. |
 | 13. Welche Lizenz besitzt das Modell?                | ResearchRAIL License                                                                                                         |
 | 14. Welche Einschränkungen hat das Modell?           | Benötigt viel Speicher und Rechenleistung.                                                                                   |
@@ -187,7 +187,7 @@ Beantwortet zu jedem gefundenen Modell kurz folgende Fragen:
 | Frage                                                | Antwort                                             |
 | ---------------------------------------------------- | --------------------------------------------------- |
 | 1. Wie heisst das Modell?                            | VGGish                                              |
-| 2. Wo wurde das Modell gefunden?                     | Kaggie Models                                       |
+| 2. Wo wurde das Modell gefunden?                     | Kaggle Models                                       |
 | 3. Wer hat das Modell entwickelt?                    | Google                                              |
 | 4. Was kann das Modell?                              | Es analysiert Audiodaten und erkennt Audio-Merkmale |
 | 5. Warum interessiert euch das Modell?               | Es eignet sich für Audio- und Geräuscherkennung     |
@@ -214,7 +214,7 @@ Beantwortet zu jedem gefundenen Modell kurz folgende Fragen:
 | 6. Welche Eingaben verarbeitet es?                   | Texte                                                                             |
 | 7. Welche Ergebnisse erstellt es?                    | Text-Embeddings                                                                   |
 | 8. Welche Sprachen unterstützt es?                   | Mehrere Sprachen (je nach Modellversion)                                          |
-| 9. Wie gross ist das Modell?                         | Unterschiedlich, je nach Version (z.B. 33,4 Mio Parameter                         |
+| 9. Wie gross ist das Modell?                         | Unterschiedlich, je nach Version (z.B. 33,4 Mio. Parameter)                       |
 | 10. Kann es ohne Internet verwendet werden?          | Ja                                                                                |
 | 11. Könnte es auf einem Smartphone laufen?           | Ja, kleinere Versionen sind dafür geeignet                                        |
 | 12. Gibt es eine kleinere oder quantisierte Version? | Ja, es gibt verschiedene Modellgrössen                                            |
@@ -224,23 +224,23 @@ Beantwortet zu jedem gefundenen Modell kurz folgende Fragen:
 
 #### 6. Modell Diffusion Gemma Fragen beantworten
 
-| Frage                                                | Antwort                                                              |
-| ---------------------------------------------------- | -------------------------------------------------------------------- |
-| 1. Wie heisst das Modell?                            | Diffusion Gemma                                                      |
-| 2. Wo wurde das Modell gefunden?                     | Kaggle Models                                                        |
-| 3. Wer hat das Modell entwickelt?                    | Google DeepMind                                                      |
-| 4. Was kann das Modell?                              | Es generiert Texte mit einem Diffusionsverfahren                     |
-| 5. Warum interessiert euch das Modell?               | Es zeigt eine andere Methode zur Textgenerierung als klassische LLMs |
-| 6. Welche Eingaben verarbeitet es?                   | Text, Bilder und Videos                                              |
-| 7. Welche Ergebnisse erstellt es?                    | Texte                                                                |
-| 8. Welche Sprachen unterstützt es?                   | Mehrere Sprachen                                                     |
-| 9. Wie gross ist das Modell?                         | 25.2 Mrd. Parameter                                                  |
-| 10. Kann es ohne Internet verwendet werden?          | Ja                                                                   |
-| 11. Könnte es auf einem Smartphone laufen?           | Eher nein                                                            |
-| 12. Gibt es eine kleinere oder quantisierte Version? | Ja, es gibt quantisierte Versionen                                   |
-| 13. Welche Lizenz besitzt das Modell?                | Apache 2.0                                                           |
-| 14. Welche Einschränkungen hat das Modell?           | Benötigt leistungsstarke Hardware                                    |
-| 15. Wofür könnte man es in einer App verwenden?      | Chatbot, Textgenerator oder Schreibassistent                         |
+| Frage                                                | Antwort                                                                                              |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| 1. Wie heisst das Modell?                            | Diffusion Gemma                                                                                      |
+| 2. Wo wurde das Modell gefunden?                     | Kaggle Models                                                                                        |
+| 3. Wer hat das Modell entwickelt?                    | Google DeepMind                                                                                      |
+| 4. Was kann das Modell?                              | Ein experimentelles Modell von Google DeepMind, das Diffusionsmethoden für generative KI untersucht. |
+| 5. Warum interessiert euch das Modell?               | Es zeigt eine andere Methode zur Textgenerierung als klassische LLMs                                 |
+| 6. Welche Eingaben verarbeitet es?                   | Text (je nach Modellvariante)                                                                        |
+| 7. Welche Ergebnisse erstellt es?                    | Texte                                                                                                |
+| 8. Welche Sprachen unterstützt es?                   | Mehrere Sprachen                                                                                     |
+| 9. Wie gross ist das Modell?                         | 25,2 Mrd. Parameter                                                                                  |
+| 10. Kann es ohne Internet verwendet werden?          | Ja                                                                                                   |
+| 11. Könnte es auf einem Smartphone laufen?           | Eher nein                                                                                            |
+| 12. Gibt es eine kleinere oder quantisierte Version? | Ja, es gibt quantisierte Versionen                                                                   |
+| 13. Welche Lizenz besitzt das Modell?                | Apache 2.0                                                                                           |
+| 14. Welche Einschränkungen hat das Modell?           | Benötigt leistungsstarke Hardware                                                                    |
+| 15. Wofür könnte man es in einer App verwenden?      | Chatbot, Textgenerator oder Schreibassistent                                                         |
 
 #### 7. Modell segmentation-3.0 Fragen beantworten
 
@@ -249,7 +249,7 @@ Beantwortet zu jedem gefundenen Modell kurz folgende Fragen:
 | 1. Wie heisst das Modell?                            | segmentation-3.0                                                  |
 | 2. Wo wurde das Modell gefunden?                     | Hugging Face                                                      |
 | 3. Wer hat das Modell entwickelt?                    | pyannote                                                          |
-| 4. Was kann das Modell?                              | Es erkennt, wann gesprochen wird und trennt verschiedene Sprachen |
+| 4. Was kann das Modell?                              | Es erkennt, wann gesprochen wird und trennt verschiedene Sprecher |
 | 5. Warum interessiert euch das Modell?               | Es eignet sich für Sprach- und Audioanwendungen                   |
 | 6. Welche Eingaben verarbeitet es?                   | Audiodateien                                                      |
 | 7. Welche Ergebnisse erstellt es?                    | Sprachsegmente und Sprecherinformationen                          |
@@ -264,23 +264,23 @@ Beantwortet zu jedem gefundenen Modell kurz folgende Fragen:
 
 #### 8. Modell: donut-base Fragen beantworten
 
-| Frage                                                | Antwort                                                               |
-| ---------------------------------------------------- | --------------------------------------------------------------------- |
-| 1. Wie heisst das Modell?                            | Donut-Base                                                            |
-| 2. Wo wurde das Modell gefunden?                     | Hugging Face                                                          |
-| 3. Wer hat das Modell entwickelt?                    | naver-clova-ix                                                        |
-| 4. Was kann das Modell?                              | Es analysiert Dokumente und liest Informationen direkt aus Bildern    |
-| 5. Warum interessiert euch das Modell?               | Es eignet sich für die Verarbeitung von Dokumenten                    |
-| 6. Welche Eingaben verarbeitet es?                   | Dokumentbilder und Bilder                                             |
-| 7. Welche Ergebnisse erstellt es?                    | Texte und Informationen aus Dokumenten                                |
-| 8. Welche Sprachen unterstützt es?                   | Mehrere Sprachen (Englisch, Chinesisch, Japanisch und Koreanisch)     |
-| 9. Wie gross ist das Modell?                         | 200 Millionen Parameter                                               |
-| 10. Kann es ohne Internet verwendet werden?          | Ja                                                                    |
-| 11. Könnte es auf einem Smartphone laufen?           | Ja                                                                    |
-| 12. Gibt es eine kleinere oder quantisierte Version? | Es gibt verschiedene Donut-Modelle                                    |
-| 13. Welche Lizenz besitzt das Modell?                | MIT                                                                   |
-| 14. Welche Einschränkungen hat das Modell?           | Das Basismodell muss für eine konkrete Aufgabe weitertrainiert werden |
-| 15. Wofür könnte man es in einer App verwenden?      | Rechnungen, Formulare oder Belege analysieren                         |
+| Frage                                                | Antwort                                                                             |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| 1. Wie heisst das Modell?                            | Donut-Base                                                                          |
+| 2. Wo wurde das Modell gefunden?                     | Hugging Face                                                                        |
+| 3. Wer hat das Modell entwickelt?                    | naver-clova-ix                                                                      |
+| 4. Was kann das Modell?                              | Es analysiert Dokumente und liest Informationen direkt aus Bildern                  |
+| 5. Warum interessiert euch das Modell?               | Es eignet sich für die Verarbeitung von Dokumenten                                  |
+| 6. Welche Eingaben verarbeitet es?                   | Dokumentbilder und Bilder                                                           |
+| 7. Welche Ergebnisse erstellt es?                    | Texte und Informationen aus Dokumenten                                              |
+| 8. Welche Sprachen unterstützt es?                   | Mehrere Sprachen (Englisch, Chinesisch, Japanisch und Koreanisch)                   |
+| 9. Wie gross ist das Modell?                         | 200 Millionen Parameter                                                             |
+| 10. Kann es ohne Internet verwendet werden?          | Ja                                                                                  |
+| 11. Könnte es auf einem Smartphone laufen?           | Auf leistungsfähigen Smartphones möglich, kleinere Varianten wären besser geeignet. |
+| 12. Gibt es eine kleinere oder quantisierte Version? | Es gibt verschiedene Donut-Modelle                                                  |
+| 13. Welche Lizenz besitzt das Modell?                | MIT                                                                                 |
+| 14. Welche Einschränkungen hat das Modell?           | Das Basismodell muss für eine konkrete Aufgabe weiter trainiert werden              |
+| 15. Wofür könnte man es in einer App verwenden?      | Rechnungen, Formulare oder Belege analysieren                                       |
 
 #### 9. Modell: blip-image-captioning-base Fragen beantworten
 
@@ -294,11 +294,11 @@ Beantwortet zu jedem gefundenen Modell kurz folgende Fragen:
 | 6. Welche Eingaben verarbeitet es?                   | Bilder                                                |
 | 7. Welche Ergebnisse erstellt es?                    | Beschreibungen (Texte) von Bildern                    |
 | 8. Welche Sprachen unterstützt es?                   | Englisch                                              |
-| 9. Wie gross ist das Modell?                         | 247 Mio Parametern, ca. 990 MB                        |
+| 9. Wie gross ist das Modell?                         | 247 Mio. Parameter, ca. 990 MB                        |
 | 10. Kann es ohne Internet verwendet werden?          | Ja, nach dem Herunterladen                            |
 | 11. Könnte es auf einem Smartphone laufen?           | Ja                                                    |
 | 12. Gibt es eine kleinere oder quantisierte Version? | Ja, es gibt quantisierte Versionen                    |
-| 13. Welche Lizenz besitzt das Modell?                | bsd-3-clause                                          |
+| 13. Welche Lizenz besitzt das Modell?                | BSD-3-clause                                          |
 | 14. Welche Einschränkungen hat das Modell?           | Es ist hauptsächlich für Bildbeschreibungen geeignet  |
 | 15. Wofür könnte man es in einer App verwenden?      | Bilder automatisch beschreiben oder Fotos analysieren |
 
@@ -316,7 +316,7 @@ Beantwortet zu jedem gefundenen Modell kurz folgende Fragen:
 | 8. Welche Sprachen unterstützt es?                   | Englisch                                             |
 | 9. Wie gross ist das Modell?                         | 144 Mio. Parameter, 540 MB                           |
 | 10. Kann es ohne Internet verwendet werden?          | Ja, nach dem Herunterladen                           |
-| 11. Könnte es auf einem Smartphone laufen?           | Ja                                                   |
+| 11. Könnte es auf einem Smartphone laufen?           | Ja, je nach Gerät und Optimierung                    |
 | 12. Gibt es eine kleinere oder quantisierte Version? | Es gibt weitere SpeechT5-Modelle für andere Aufgaben |
 | 13. Welche Lizenz besitzt das Modell?                | MIT                                                  |
 | 14. Welche Einschränkungen hat das Modell?           | Es unterstützt hauptsächlich Englisch                |
@@ -366,30 +366,30 @@ Sucht mindestens **10 verschiedene APIs oder Schnittstellen**.
 
 ### Tabelle für die APIs
 
-| Nr. | API oder Schnittstelle                 | Funktion                                           | iOS                    | Android                | Internet nötig | Verarbeitete Daten                              |
-| --: | -------------------------------------- | -------------------------------------------------- | ---------------------- | ---------------------- | -------------- | ----------------------------------------------- |
-|   1 | CameraX                                | Zugriff auf Kamera, Fotos, Videos und Bild analyse | Nein                   | Ja                     | Nein           | Bilder und Videos                               |
-|   2 | Notification API (NotificationManager) | Erstellt und verwaltet Benachrichtigungen          | Ähnliche API vorhanden | Ja                     | Nein           | Nachrichtentexte und Benachrichtigungen         |
-|   3 | MediaRecorder API                      | Audioaufnahme über das Mikrofon                    | Ähnliche API vorhanden | Ja                     | Nein           | Audiodateien und Sprachaufnahmen                |
-|   4 | Room Database                          | Lokale Speicherung von App Daten                   | Ähnliche API vorhanden | Ja                     | Nein           | Lokale Daten wie Texte und Einstellungen        |
-|   5 | Fused Location Provider API            | Ermittelt den Standort des Geräts                  | Ähnliche API vorhanden | Ja                     | Nein           | Standortdaten                                   |
-|   6 | Calender Provider API                  | Liest und verwaltet Kalender und Termine           | Ähnliche API vorhanden | Ja                     | Nein           | Kalender- und Termindaten                       |
-|   7 | Contacts Framework                     | Liest und verwaltet Kontakte                       | Ja                     | Ähnliche API vorhanden | Nein           | Kontaktdaten wie Name, Bild, Telefonnummer usw. |
-|   8 | Photos Framework                       | Zugriff auf Fotos & Videos von der Galerie         | Ja                     | Ähnliche API vorhanden | Nein           | Fotos, Videos und Metadaten                     |
-|   9 | FileManager                            | Verwaltet Dateien und Ordner                       | Ja                     | Ähnliche API vorhanden | Nein           | Dateien und Ordner der App                      |
-|  10 | Core Motion Framework                  | Zugriff auf Bewegungs- und Lagesensoren            | Ja                     | Ähnliche API vorhanden | Nein           | Bewegungs- und Sensordaten                      |
+| Nr. | API oder Schnittstelle                 | Funktion                                          | iOS                    | Android                | Internet nötig | Verarbeitete Daten                                 |
+| --: | -------------------------------------- | ------------------------------------------------- | ---------------------- | ---------------------- | -------------- | -------------------------------------------------- |
+|   1 | CameraX                                | Zugriff auf Kamera, Fotos, Videos und Bildanalyse | Nein                   | Ja                     | Nein           | Bilder und Videos                                  |
+|   2 | Notification API (NotificationManager) | Erstellt und verwaltet Benachrichtigungen         | Ähnliche API vorhanden | Ja                     | Nein           | Nachrichtentexte und Benachrichtigungen            |
+|   3 | MediaRecorder API                      | Audioaufnahme über das Mikrofon                   | Ähnliche API vorhanden | Ja                     | Nein           | Audiodateien und Sprachaufnahmen                   |
+|   4 | Room Database                          | Lokale Speicherung von App-Daten                  | Ähnliche API vorhanden | Ja                     | Nein           | Lokale Daten wie Texte und Einstellungen           |
+|   5 | Fused Location Provider API            | Ermittelt den Standort des Geräts                 | Ähnliche API vorhanden | Ja                     | Nein           | Standortdaten                                      |
+|   6 | Calendar Provider API                  | Liest und verwaltet Kalender und Termine          | Ähnliche API vorhanden | Ja                     | Nein           | Kalender- und Termindaten                          |
+|   7 | Contacts Framework                     | Liest und verwaltet Kontakte                      | Ja                     | Ähnliche API vorhanden | Nein           | Kontaktdaten wie Name, Bilder, Telefonnummern usw. |
+|   8 | Photos Framework                       | Zugriff auf Fotos & Videos von der Galerie        | Ja                     | Ähnliche API vorhanden | Nein           | Fotos, Videos und Metadaten                        |
+|   9 | FileManager                            | Verwaltet Dateien und Ordner                      | Ja                     | Ähnliche API vorhanden | Nein           | Dateien und Ordner der App                         |
+|  10 | Core Motion Framework                  | Zugriff auf Bewegungs- und Lagesensoren           | Ja                     | Ähnliche API vorhanden | Nein           | Bewegungs- und Sensordaten                         |
 
 #### 1. API: CameraX Fragen beantworten
 
 | Frage                                                         | Antwort                                                           |
 | ------------------------------------------------------------- | ----------------------------------------------------------------- |
 | 1. Wie heisst die API oder Schnittstelle?                     | CameraX                                                           |
-| 2. Was kann sie?                                              | Zugriff auf Kamera, Fotos, Videos und Bildanalyse                 |
+| 2. Was kann sie?                                              | Zugriff auf Kamera, Fotos, Videos und Bildanalyse-Funktionen      |
 | 3. Für welche App-Funktion könnte sie verwendet werden?       | Fotos aufnehmen, Dokumente scannen oder Bilder mit KI analysieren |
 | 4. Gibt es sie auf iOS?                                       | Nein                                                              |
 | 5. Gibt es sie auf Android?                                   | Ja                                                                |
 | 6. Benötigt sie Internet?                                     | Nein                                                              |
-| 7. Welche Berechtigungen werden benötigt?                     | Kamera- und Galeriezugriff                                        |
+| 7. Welche Berechtigungen werden benötigt?                     | Kamerazugriff                                                     |
 | 8. Welche Daten verarbeitet sie?                              | Bilder und Videodaten                                             |
 | 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, Bilder können persönliche Daten enthalten.                    |
 | 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja z.B. mit Modellen für Bilderkennung oder Dokumentanalyse       |
@@ -399,8 +399,8 @@ Sucht mindestens **10 verschiedene APIs oder Schnittstellen**.
 | Frage                                                         | Antwort                                                         |
 | ------------------------------------------------------------- | --------------------------------------------------------------- |
 | 1. Wie heisst die API oder Schnittstelle?                     | Notification API (NotificationManager)                          |
-| 2. Was kann sie?                                              | Erstellt und verwaltet Benachrichtigungen (Android Geräte)      |
-| 3. Für welche App-Funktion könnte sie verwendet werden?       | Erinnerungen, Warnungen oder KI-Ergebnisse anzeigen             |
+| 2. Was kann sie?                                              | Erstellt und verwaltet Benachrichtigungen (Android-Geräte)      |
+| 3. Für welche App-Funktion könnte sie verwendet werden?       | Erinnerungen, Warnungen oder KI-Ergebnisse anzeigen lassen      |
 | 4. Gibt es sie auf iOS?                                       | Nein, es gibt aber ähnliche API (z.B. UserNotifications)        |
 | 5. Gibt es sie auf Android?                                   | Ja                                                              |
 | 6. Benötigt sie Internet?                                     | Nein (es ist eine lokale Benachrichtigung)                      |
@@ -416,28 +416,28 @@ Sucht mindestens **10 verschiedene APIs oder Schnittstellen**.
 | 1. Wie heisst die API oder Schnittstelle?                     | MediaRecorder API                                                         |
 | 2. Was kann sie?                                              | Nimmt Audio über das Mikrofon des Geräts auf                              |
 | 3. Für welche App-Funktion könnte sie verwendet werden?       | Sprachaufnahmen, Sprachsteuerung oder Audioanalyse                        |
-| 4. Gibt es sie auf iOS?                                       | Nein, es gibt aber ähnliche API's (z.B. AVAudioRecorder)                  |
+| 4. Gibt es sie auf iOS?                                       | Nein, es gibt aber ähnliche APIs (z.B. AVAudioRecorder / AVFoundation)    |
 | 5. Gibt es sie auf Android?                                   | Ja                                                                        |
 | 6. Benötigt sie Internet?                                     | Nein                                                                      |
 | 7. Welche Berechtigungen werden benötigt?                     | Mikrofonzugriff                                                           |
 | 8. Welche Daten verarbeitet sie?                              | Audiosignale und Sprachaufnahmen                                          |
 | 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, Audioaufnahmen können persönliche Informationen enthalten             |
-| 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. mit Whisper für Speech-To-Text oder VGGish für Geräuscherkennung |
+| 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. mit Whisper für Speech-to-Text oder VGGish für Geräuscherkennung |
 
 #### 4. API: Room Database API Fragen beantworten
 
-| Frage                                                         | Antwort                                              |
-| ------------------------------------------------------------- | ---------------------------------------------------- |
-| 1. Wie heisst die API oder Schnittstelle?                     | Room Database                                        |
-| 2. Was kann sie?                                              | Speichert und verwaltet Daten lokal auf dem Gerät    |
-| 3. Für welche App-Funktion könnte sie verwendet werden?       | Speichern von Notizen und Benutzerdaten              |
-| 4. Gibt es sie auf iOS?                                       | Nein, aber es gibt ähnliche APIs (z.B. Core Data)    |
-| 5. Gibt es sie auf Android?                                   | Ja                                                   |
-| 6. Benötigt sie Internet?                                     | Nein                                                 |
-| 7. Welche Berechtigungen werden benötigt?                     | Keine                                                |
-| 8. Welche Daten verarbeitet sie?                              | Lokale gespeicherte App Daten                        |
-| 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, wenn persönliche Daten gespeichert werden        |
-| 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. um Dokumente oder Chatverlaufe zu speichern |
+| Frage                                                         | Antwort                                                 |
+| ------------------------------------------------------------- | ------------------------------------------------------- |
+| 1. Wie heisst die API oder Schnittstelle?                     | Room Database                                           |
+| 2. Was kann sie?                                              | Speichert und verwaltet lokale App-Daten auf dem Gerät. |
+| 3. Für welche App-Funktion könnte sie verwendet werden?       | Speichern von Notizen und Benutzerdaten                 |
+| 4. Gibt es sie auf iOS?                                       | Nein, aber es gibt ähnliche APIs (z.B. Core Data)       |
+| 5. Gibt es sie auf Android?                                   | Ja                                                      |
+| 6. Benötigt sie Internet?                                     | Nein                                                    |
+| 7. Welche Berechtigungen werden benötigt?                     | Keine                                                   |
+| 8. Welche Daten verarbeitet sie?                              | Lokal gespeicherte App-Daten                            |
+| 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, wenn persönliche Daten gespeichert werden           |
+| 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. um Dokumente oder Chatverläufe zu speichern    |
 
 #### 5. API: Fused Location Provider API Fragen beantworten
 
@@ -446,7 +446,7 @@ Sucht mindestens **10 verschiedene APIs oder Schnittstellen**.
 | 1. Wie heisst die API oder Schnittstelle?                     | Fused Location Provider API                                                          |
 | 2. Was kann sie?                                              | Ermittelt den aktuellen Standort des Geräts                                          |
 | 3. Für welche App-Funktion könnte sie verwendet werden?       | Für Navigation, ortsbezogene Informationen oder Standortvorschläge                   |
-| 4. Gibt es sie auf iOS?                                       | Nein, aber es gibt ähnliche API's (z.B. Core Location)                               |
+| 4. Gibt es sie auf iOS?                                       | Nein, aber es gibt ähnliche APIs (z.B. Core Location)                                |
 | 5. Gibt es sie auf Android?                                   | Ja                                                                                   |
 | 6. Benötigt sie Internet?                                     | Nein                                                                                 |
 | 7. Welche Berechtigungen werden benötigt?                     | Standortberechtigung                                                                 |
@@ -454,11 +454,11 @@ Sucht mindestens **10 verschiedene APIs oder Schnittstellen**.
 | 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, Standortdaten gelten als persönliche Daten                                       |
 | 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. damit man ortsbezogene Empfehlungen erhält oder für intelligente Navigation |
 
-#### 6. API: Calender Provider API Fragen beantworten
+#### 6. API: Calendar Provider API Fragen beantworten
 
 | Frage                                                         | Antwort                                                         |
 | ------------------------------------------------------------- | --------------------------------------------------------------- |
-| 1. Wie heisst die API oder Schnittstelle?                     | Calender Provider API                                           |
+| 1. Wie heisst die API oder Schnittstelle?                     | Calendar Provider API                                           |
 | 2. Was kann sie?                                              | Liest und verwaltet Kalender und Termine                        |
 | 3. Für welche App-Funktion könnte sie verwendet werden?       | Termine anzeigen, erstellen oder bearbeiten                     |
 | 4. Gibt es sie auf iOS?                                       | Nein, es gibt jedoch eine ähnliche API (EventKit)               |
@@ -480,7 +480,7 @@ Sucht mindestens **10 verschiedene APIs oder Schnittstellen**.
 | 5. Gibt es sie auf Android?                                   | Nein, aber es gibt eine ähnliche API (Contacts Provider)             |
 | 6. Benötigt sie Internet?                                     | Nein                                                                 |
 | 7. Welche Berechtigungen werden benötigt?                     | Zugriff auf die Kontakte                                             |
-| 8. Welche Daten verarbeitet sie?                              | Kontaktdaten wie Name, Telefonnummer, Bild, und E-Mail Adressen      |
+| 8. Welche Daten verarbeitet sie?                              | Kontaktdaten wie Name, Telefonnummer, Bild, und E-Mail-Adressen      |
 | 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, Kontaktdaten sind persönliche Daten                              |
 | 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. für eine intelligente Suche oder Organisieren von Kontakten |
 
@@ -516,18 +516,18 @@ Sucht mindestens **10 verschiedene APIs oder Schnittstellen**.
 
 #### 10. API: Core Motion Framework Fragen beantworten
 
-| Frage                                                         | Antwort                                                                                 |
-| ------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| 1. Wie heisst die API oder Schnittstelle?                     | Core Motion Framework                                                                   |
-| 2. Was kann sie?                                              | Greift auf Bewegungs- und Lagesensoren des Geräts zu                                    |
-| 3. Für welche App-Funktion könnte sie verwendet werden?       | Fitnesstracking (z.B. Schritte tracken), Aktivitäten analysieren, Querformat            |
-| 4. Gibt es sie auf iOS?                                       | Ja                                                                                      |
-| 5. Gibt es sie auf Android?                                   | Nein, aber es gibt ähnliche Sensor-APIs                                                 |
-| 6. Benötigt sie Internet?                                     | Nein                                                                                    |
-| 7. Welche Berechtigungen werden benötigt?                     | Je nach Sensor können Berechtigungen erforderlich sein                                  |
-| 8. Welche Daten verarbeitet sie?                              | Bewegungs- und Sensordaten, z.B. Rotation des Geräts für Querformat oder Beschleunigung |
-| 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, Bewegungsdaten sind persönliche Daten                                               |
-| 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. zur Aktivitätserkennung                                                        |
+| Frage                                                         | Antwort                                                                                   |
+| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| 1. Wie heisst die API oder Schnittstelle?                     | Core Motion Framework                                                                     |
+| 2. Was kann sie?                                              | Greift auf Bewegungs- und Lagesensoren des Geräts zu                                      |
+| 3. Für welche App-Funktion könnte sie verwendet werden?       | Fitnesstracking (z.B. Schritte tracken), Aktivitäten analysieren und Bewegungen erkennen. |
+| 4. Gibt es sie auf iOS?                                       | Ja                                                                                        |
+| 5. Gibt es sie auf Android?                                   | Nein, aber es gibt ähnliche Sensor-APIs                                                   |
+| 6. Benötigt sie Internet?                                     | Nein                                                                                      |
+| 7. Welche Berechtigungen werden benötigt?                     | Je nach Sensor können Berechtigungen erforderlich sein                                    |
+| 8. Welche Daten verarbeitet sie?                              | Bewegungs- und Sensordaten, z.B. Rotation des Geräts für Querformat oder Beschleunigung   |
+| 9. Verarbeitet sie persönliche oder sensible Daten?           | Ja, Bewegungsdaten sind persönliche Daten                                                 |
+| 10. Könnte sie mit einem lokalen AI-Modell kombiniert werden? | Ja, z.B. zur Aktivitätserkennung                                                          |
 
 ---
 
@@ -565,13 +565,13 @@ Mögliche Suchbegriffe:
 
 ### Tabelle für iOS-Technologien
 
-| Technologie                | Aufgabe                                                                                                 | Lokal ausführbar | Programmiersprache | Einschränkungen                                                                          |
-| -------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | ---------------------------------------------------------------------------------------- |
-| CoreML                     | Ausführen von Machine-Learning-Modellen direkt auf dem Gerät                                            | Ja               | Swift              | Modelle müssen meistens in das CoreML Format konvertiert werden                          |
-| Vision Framework           | Bildanalyse, Bilderkennung, Texterkennung und Erkennung von Objekten oder Gesichtern                    | Ja               | Swift              | Unter nur bestimmte Bildverarbeitungsaufgaben (komplexere Modelle benötigen oft Core ML) |
-| Apple Intelligence         | KI-Funktionen wie Textverständnis, Zusammenfassungen, Schreibunterstützung und Bildfunktionen ausführen | Teilweise        | Swift              | Benötigt unterstützte Geräte und aktuelle Betriebssysteme                                |
-| Natural Language Framework | Textanalyse, Spracherkennung, Klassifikation und Analyse von Texten                                     | Ja               | Swift              | Bietet fertige Sprachfunktionen (komplexere Sprachmodelle benötigen oft Core ML)         |
-| Create ML                  | Erstellen und Trainieren eigener Machine-Learning-Modelle für Apple Plattformen                         | Ja               | Swift              | Benötigt Trainingsdaten (Modelle sind meist für bestimmte Aufgaben spezialisiert)        |
+| Technologie                | Aufgabe                                                                                                 | Lokal ausführbar | Programmiersprache | Einschränkungen                                                                                |
+| -------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | ---------------------------------------------------------------------------------------------- |
+| CoreML                     | Ausführen von Machine-Learning-Modellen direkt auf dem Gerät                                            | Ja               | Swift              | Modelle müssen meistens in das CoreML Format konvertiert werden                                |
+| Vision Framework           | Bildanalyse, Bilderkennung, Texterkennung und Erkennung von Objekten oder Gesichtern                    | Ja               | Swift              | Unterstützt nur bestimmte Bildverarbeitungsaufgaben (komplexere Modelle benötigen oft Core ML) |
+| Apple Intelligence         | KI-Funktionen wie Textverständnis, Zusammenfassungen, Schreibunterstützung und Bildfunktionen ausführen | Teilweise        | Swift              | Benötigt unterstützte Geräte und aktuelle Betriebssysteme                                      |
+| Natural Language Framework | Textanalyse, Sprachverarbeitung, Klassifikation und Analyse von Texten                                  | Ja               | Swift              | Bietet fertige Sprachfunktionen (komplexere Sprachmodelle benötigen oft Core ML)               |
+| Create ML                  | Erstellen und Trainieren eigener Machine-Learning-Modelle für Apple Plattformen                         | Ja               | Swift              | Benötigt Trainingsdaten (Modelle sind meist für bestimmte Aufgaben spezialisiert)              |
 
 ### Fragen zur iOS-Recherche beantworten
 
@@ -580,7 +580,7 @@ Mögliche Suchbegriffe:
 | 1. Welche AI-Technologien bietet Apple an?                 | Apple bietet Technologien wie CoreML, Vision Framework, Swift On-Device AI, Apple Intelligence und viele mehr an.                                                          |
 | 2. Welche Technologien funktionieren direkt auf dem Gerät? | CoreML, Vision, Natural Language und Speech können direkt auf dem Gerät verwendet werden.                                                                                  |
 | 3. Welche Modellformate werden unterstützt?                | Vor allem das Core ML Format (.mlmodel, .mlpackage). Andere müssen oft konvertiert werden.                                                                                 |
-| 4. Wie kann ein Modell in Swift verwendet werden?          | Modelle werden in Xcode eingebunden und über Swift-APIs der jeweilgen Technologie verwendet.                                                                               |
+| 4. Wie kann ein Modell in Swift verwendet werden?          | Modelle werden in Xcode eingebunden und über Swift-APIs der jeweiligen Technologie verwendet.                                                                              |
 | 5. Welche Technologien unterstützen Text?                  | Natural Language Framework, Speech Framework und Core ML.                                                                                                                  |
 | 6. Welche Technologien unterstützen Bilder?                | Vision Framework, Core ML und Create ML.                                                                                                                                   |
 | 7. Welche Technologien unterstützen Sprache?               | Speech Framework, Natural Language Framework und Core ML.                                                                                                                  |
@@ -626,32 +626,30 @@ Mögliche Suchbegriffe:
 
 ### Tabelle für Android-Technologien
 
-| Technologie         | Aufgabe                                                                                 | Lokal ausführbar      | Mit Java verwendbar | Einschränkungen                                                   |
-| ------------------- | --------------------------------------------------------------------------------------- | --------------------- | ------------------- | ----------------------------------------------------------------- |
-| ML Kit              | Texterkennung, Barcode-Scanner, Gesichtserkennung usw.                                  | Ja (viele Funktionen) | Ja                  | Nicht alle Funktionen sind offline verfügbar                      |
-| MediaPipe           | Verarbeitung von Bildern, Videos und Audio (z.B. für eine Hand- oder Gesichtserkennung) | Ja                    | Ja (eingeschränkt)  | Funktionsrate verschlechtert sich bei verschiedenen Verhältnissen |
-| ExecuTorch          | Führt PyTorch-Modelle auf dem Gerät effizient aus                                       | Ja                    | Ja                  | Unterstützt hauptsächlich PyTorch Modelle                         |
-| LiteRT              | Führt KI-Modelle auf dem Android Gerät aus                                              | Ja                    | Ja (eingeschränkt)  | Modelle müssen im LiteRT-/TensorFlow-Lite-Format vorliegen        |
-| ONNX Runtime Mobile | Führt ONNX-KI-Modelle lokal auf Android Geräten aus                                     | Ja                    | Ja                  | Unterstützt nur Modelle im ONNX-Format                            |
-
-### Fragen zur iOS-Recherche beantworten
+| Technologie         | Aufgabe                                                                                 | Lokal ausführbar      | Mit Java verwendbar                        | Einschränkungen                                                       |
+| ------------------- | --------------------------------------------------------------------------------------- | --------------------- | ------------------------------------------ | --------------------------------------------------------------------- |
+| ML Kit              | Texterkennung, Barcode-Scanner, Gesichtserkennung usw.                                  | Ja (viele Funktionen) | Ja                                         | Nicht alle Funktionen sind offline verfügbar                          |
+| MediaPipe           | Verarbeitung von Bildern, Videos und Audio (z.B. für eine Hand- oder Gesichtserkennung) | Ja                    | Ja (eingeschränkt)                         | Die Genauigkeit kann je nach Gerät und Umgebung unterschiedlich sein. |
+| ExecuTorch          | Führt PyTorch-Modelle auf dem Gerät effizient aus                                       | Ja                    | Eingeschränkt / hauptsächlich Native (C++) | Unterstützt hauptsächlich PyTorch-Modelle                             |
+| LiteRT              | Führt KI-Modelle auf dem Android-Gerät aus                                              | Ja                    | Ja (eingeschränkt)                         | Modelle müssen im LiteRT-/TensorFlow-Lite-Format vorliegen            |
+| ONNX Runtime Mobile | Führt ONNX-KI-Modelle lokal auf Android-Geräten aus                                     | Ja                    | Ja                                         | Unterstützt nur Modelle im ONNX-Format                                |
 
 ### Fragen zur Android-Recherche beantworten
 
-| Frage                                                       | Antwort                                                                                                          |
-| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| 1. Welche AI-Technologien gibt es für Android?              | ML Kit, LiteRT (TensorFlow Lite), MediaPipe, ONNX Runtime Mobile und ExecuTorch.                                 |
-| 2. Welche Technologien können mit Java verwendet werden?    | LiteRT (über Java API), ML Kit und ONNX Runtime Mobile. MediaPipe unterstützt Java nur eingeschränkt.            |
-| 3. Welche Modelle können lokal ausgeführt werden?           | TensorFlow-Lite-, ONNX- und PyTorch-Modelle sowie die in ML Kit integrierten Modelle.                            |
-| 4. Welche Modellformate werden unterstützt?                 | ".tflite", ".onnx" und PyTorch-Modelle                                                                           |
-| 5. Können GPU oder NPU verwendet werden?                    | Ja, viele Technologien unterstützen GPU oder NPU zur Beschleunigung der KI-Berechnungen                          |
-| 6. Welche Android-Versionen werden unterstützt?             | Je nach Technologie unterschiedlich, viele unterstützen Android 5.0 oder neuer                                   |
-| 7. Welche Geräteanforderungen gibt es?                      | Ein Android Gerät mit ausreichend Arbeitsspeicher (bzw. RAM) und Rechenleistung                                  |
-| 8. Welche Unterschiede gibt es zwischen Android-Geräten?    | Prozessor, Arbeitsspeicher und Hardwarebeschleunigung (GPU/NPU) unterscheiden sich je nach Gerät                 |
-| 9. Können Modelle von Hugging Face verwendet werden?        | Ja, viele Modelle können benutzt werden, aber einige müssen jedoch in ein unterstützes Format konvertiert werden |
-| 10. Müssen Modelle zuerst konvertiert werden?               | Oft ja, z.B. in das TensorFlow-Lite- oder ONNX-Format                                                            |
-| 11. Welche Technologien eignen sich für Text?               | LiteRT, ML Kit, ONNX Runtime Mobile und ExecuTorch                                                               |
-| 12. Welche Technologien eignen sich für Bilder und Sprache? | LiteRT, ML Kit, MediaPipe und ExecuTorch                                                                         |
+| Frage                                                       | Antwort                                                                                                       |
+| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| 1. Welche AI-Technologien gibt es für Android?              | ML Kit, LiteRT (TensorFlow-Lite), MediaPipe, ONNX Runtime Mobile und ExecuTorch.                              |
+| 2. Welche Technologien können mit Java verwendet werden?    | LiteRT (über Java API), ML Kit und ONNX Runtime Mobile. MediaPipe unterstützt Java nur eingeschränkt.         |
+| 3. Welche Modelle können lokal ausgeführt werden?           | TensorFlow-Lite-, ONNX- und PyTorch-Modelle sowie die in ML Kit integrierten Modelle.                         |
+| 4. Welche Modellformate werden unterstützt?                 | ".tflite", ".onnx" und PyTorch-Modelle                                                                        |
+| 5. Können GPU oder NPU verwendet werden?                    | Ja, viele Technologien unterstützen GPU oder NPU zur Beschleunigung der KI-Berechnungen                       |
+| 6. Welche Android-Versionen werden unterstützt?             | Je nach Technologie unterschiedlich, viele unterstützen Android 5.0 oder neuer                                |
+| 7. Welche Geräteanforderungen gibt es?                      | Ein Android-Gerät mit ausreichend Arbeitsspeicher (bzw. RAM) und Rechenleistung                               |
+| 8. Welche Unterschiede gibt es zwischen Android-Geräten?    | Prozessor, Arbeitsspeicher und Hardwarebeschleunigung (GPU/NPU) unterscheiden sich je nach Gerät              |
+| 9. Können Modelle von Hugging Face verwendet werden?        | Ja, viele Modelle können benutzt werden, aber einige müssen jedoch in unterstützte Formate konvertiert werden |
+| 10. Müssen Modelle zuerst konvertiert werden?               | Oft ja, z.B. in das TensorFlow-Lite- oder ONNX-Format                                                         |
+| 11. Welche Technologien eignen sich für Text?               | LiteRT, ML Kit, ONNX Runtime Mobile und ExecuTorch                                                            |
+| 12. Welche Technologien eignen sich für Bilder und Sprache? | LiteRT, ML Kit, MediaPipe und ExecuTorch                                                                      |
 
 ---
 
@@ -731,10 +729,10 @@ Beispiele:
 | --------------------------------------------------- | ------------------------------------------------------------------------------ |
 | 1. Was macht die Funktion?                          | Übersetzt Texte automatisch in eine andere Sprache                             |
 | 2. Für wen wäre sie nützlich?                       | Reisende, Touristen, Schüler, Berufstätige                                     |
-| 3. Welches Problem löst sie?                        | Missverständnisse, schwierige Kommunikation                                    |
+| 3. Welches Problem löst sie?                        | Verhindert Missverständnisse und erleichtert die Kommunikation.                |
 | 4. Welches AI-Modell könnte dafür verwendet werden? | NLLB-200 oder M2M100                                                           |
 | 5. Welche APIs werden benötigt?                     | Keine, eventuell Mikrofon für die Spracheingabe                                |
-| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen übersetzungsmodell                                       |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Übersetzungsmodell                                       |
 | 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                             |
 | 8. Wie schwierig wäre die Umsetzung?                | Mittel                                                                         |
 | 9. Welche Daten verarbeitet die Funktion?           | Texte und Sprachen                                                             |
@@ -792,7 +790,7 @@ Beispiele:
 | 1. Was macht die Funktion?                          | Wandelt gesprochene Sprache automatisch in Text um                             |
 | 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Berufstätige und Personen, die Notizen aufnehmen möchten |
 | 3. Welches Problem löst sie?                        | Schnelleres Schreiben und Aufnehmen von Informationen                          |
-| 4. Welches AI-Modell könnte dafür verwendet werden? | Whisper oder SpeechT5                                                          |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | Whisper                                                                        |
 | 5. Welche APIs werden benötigt?                     | Mikrofon API                                                                   |
 | 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Sprachmodell                                             |
 | 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                             |
@@ -862,39 +860,39 @@ Beispiele:
 
 ### 11. Funktion: (Notizen automatisch sortieren) Fragen beantworten
 
-| Frage                                               | Antwort                                                                                              |
-| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| 1. Was macht die Funktion?                          | Sortiert Notizen automatisch nach Themen oder Kategorien                                             |
-| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Lernende und Berufstätige                                                      |
-| 3. Welches Problem löst sie?                        | Hilft beim Organisieren grosser Mengen an Notizen und man findet dadurch die Informationen schneller |
-| 4. Welches AI-Modell könnte dafür verwendet werden? | BGE oder ein Sprachmodell (LLM)                                                                      |
-| 5. Welche APIs werden benötigt?                     | Dateisystem API (optional, also nicht zwigend nötig)                                                 |
-| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                                                                         |
-| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                                                   |
-| 8. Wie schwierig wäre die Umsetzung?                | Mittel                                                                                               |
-| 9. Welche Daten verarbeitet die Funktion?           | Texte aus Notizen                                                                                    |
-| 10. Welche Datenschutzprobleme könnten entstehen?   | Die Notizen könnten private oder sensible Informationen enthalten                                    |
+| Frage                                               | Antwort                                                                                                   |
+| --------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| 1. Was macht die Funktion?                          | Sortiert Notizen automatisch nach Themen oder Kategorien                                                  |
+| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Lernende und Berufstätige                                                           |
+| 3. Welches Problem löst sie?                        | Hilft beim Organisieren grosser Mengen an Notizen, wodurch Informationen schneller gefunden werden können |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | BGE oder ein Sprachmodell (LLM)                                                                           |
+| 5. Welche APIs werden benötigt?                     | Dateisystem API (optional, also nicht zwingend nötig)                                                     |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                                                                              |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                                                        |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel                                                                                                    |
+| 9. Welche Daten verarbeitet die Funktion?           | Texte aus Notizen                                                                                         |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Die Notizen könnten private oder sensible Informationen enthalten                                         |
 
 ### 12. Funktion: (Lernfragen erstellen) Fragen beantworten
 
-| Frage                                               | Antwort                                                                        |
-| --------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 1. Was macht die Funktion?                          | Erstellt automatisch Fragen aus Lernmaterialien                                |
-| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende und Lernende                                              |
-| 3. Welches Problem löst sie?                        | Relevante Fragen zu erstellen um die Vorbereitung einer Prüfung zu erleichtern |
-| 4. Welches AI-Modell könnte dafür verwendet werden? | T5 oder ein Sprachmodell (LLM)                                                 |
-| 5. Welche APIs werden benötigt?                     | Keine, eventuell ein Dateisystem für Lernmaterialien                           |
-| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                                                   |
-| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                             |
-| 8. Wie schwierig wäre die Umsetzung?                | Mittel                                                                         |
-| 9. Welche Daten verarbeitet die Funktion?           | Texte und Lernmaterialien                                                      |
-| 10. Welche Datenschutzprobleme könnten entstehen?   | Es könnten private Lernunterlagen verarbeitet werden                           |
+| Frage                                               | Antwort                                                                         |
+| --------------------------------------------------- | ------------------------------------------------------------------------------- |
+| 1. Was macht die Funktion?                          | Erstellt automatisch Fragen aus Lernmaterialien                                 |
+| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende und Lernende                                               |
+| 3. Welches Problem löst sie?                        | Relevante Fragen zu erstellen, um die Vorbereitung einer Prüfung zu erleichtern |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | T5 oder ein Sprachmodell (LLM)                                                  |
+| 5. Welche APIs werden benötigt?                     | Keine, eventuell ein Dateisystem für Lernmaterialien                            |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                                                    |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                              |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel                                                                          |
+| 9. Welche Daten verarbeitet die Funktion?           | Texte und Lernmaterialien                                                       |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Es könnten private Lernunterlagen verarbeitet werden                            |
 
 ### 13. Funktion: (Ideen vorschlagen) Fragen beantworten
 
 | Frage                                               | Antwort                                                                       |
 | --------------------------------------------------- | ----------------------------------------------------------------------------- |
-| 1. Was macht die Funktion?                          | Generiert neue Ideen oder Vorschläge basierend auf die Eingaben des Benutzers |
+| 1. Was macht die Funktion?                          | Generiert neue Ideen oder Vorschläge basierend auf den Eingaben des Benutzers |
 | 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Kreative und Berufstätige                               |
 | 3. Welches Problem löst sie?                        | Hilft bei Ideen und fördert die Kreativität                                   |
 | 4. Welches AI-Modell könnte dafür verwendet werden? | Instella-MoE oder andere Sprachmodelle (LLMs)                                 |
@@ -922,18 +920,18 @@ Beispiele:
 
 ### 15. Funktion: (Lokale Dateien durchsuchen) Fragen beantworten
 
-| Frage                                               | Antwort                                                                            |
-| --------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| 1. Was macht die Funktion?                          | Durchsucht lokale Dateien nach bestimmten Informationen                            |
-| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Berufstätige und Unternehmen                                 |
-| 3. Welches Problem löst sie?                        | Erleichtert das Finden von Informationen in Dateien und spart dementsprechend Zeit |
-| 4. Welches AI-Modell könnte dafür verwendet werden? | BGE oder ein Sprachmodell (LLM)                                                    |
-| 5. Welche APIs werden benötigt?                     | Dateisystem API                                                                    |
-| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                                                       |
-| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                                 |
-| 8. Wie schwierig wäre die Umsetzung?                | Mittel bis hoch                                                                    |
-| 9. Welche Daten verarbeitet die Funktion?           | Lokale Dateien und Dokumente                                                       |
-| 10. Welche Datenschutzprobleme könnten entstehen?   | Dateien können persönliche oder vertrauliche Informationen beinhalten              |
+| Frage                                               | Antwort                                                                    |
+| --------------------------------------------------- | -------------------------------------------------------------------------- |
+| 1. Was macht die Funktion?                          | Durchsucht lokale Dateien nach bestimmten Informationen                    |
+| 2. Für wen wäre sie nützlich?                       | Schüler, Studierende, Berufstätige und Unternehmen                         |
+| 3. Welches Problem löst sie?                        | Erleichtert das Finden von Informationen in Dateien und spart dadurch Zeit |
+| 4. Welches AI-Modell könnte dafür verwendet werden? | BGE oder ein Sprachmodell (LLM)                                            |
+| 5. Welche APIs werden benötigt?                     | Dateisystem API                                                            |
+| 6. Funktioniert sie offline?                        | Ja, mit einem lokalen Modell                                               |
+| 7. Könnte sie auf iOS und Android umgesetzt werden? | Ja                                                                         |
+| 8. Wie schwierig wäre die Umsetzung?                | Mittel bis hoch                                                            |
+| 9. Welche Daten verarbeitet die Funktion?           | Lokale Dateien und Dokumente                                               |
+| 10. Welche Datenschutzprobleme könnten entstehen?   | Dateien können persönliche oder vertrauliche Informationen beinhalten      |
 
 ---
 
@@ -977,7 +975,7 @@ Untersucht den Unterschied zwischen lokaler AI und AI aus der Cloud.
 | 2. Was bedeutet Cloud-AI?                                       | Die KI verarbeitet Daten auf einem Cloud-Server statt direkt auf einem Gerät. (Daten werden über das Internet gesendet und das Ergebnis danach zurückgeschickt.)     |
 | 3. Welche Variante benötigt Internet?                           | Die Cloud-AI benötigt eine Internetverbindung, da die Daten auf einem Cloud-Server verarbeitet werden. Die On-Device-AI funktioniert auch ohne Internet.             |
 | 4. Welche Variante schützt persönliche Daten besser?            | Die On-Device-AI schützt persönliche Daten besser, da die Daten nur lokal auf dem Gerät verarbeitet werden.                                                          |
-| 5. Welche Variante ist schneller?                               | Die On-Device-AI ist meistens schneller, da die Verarbeitung der Daten nicht über das Internet erfolgt.                                                              |
+| 5. Welche Variante ist schneller?                               | Die On-Device-AI kann schneller reagieren, da keine Datenübertragung über das Internet notwendig ist.                                                                |
 | 6. Welche Variante benötigt mehr Speicherplatz auf dem Gerät?   | Die On-Device-AI benötigt mehr Speicherplatz, da das KI-Modell lokal auf dem Gerät gespeichert und ausgeführt wird.                                                  |
 | 7. Welche Variante verursacht laufende Kosten?                  | Die Cloud-AI-Variante verursacht laufende Kosten, da für den Betrieb und die Nutzung von Cloud-Servern bezahlt werden muss.                                          |
 | 8. Welche Variante funktioniert auf älteren Smartphones besser? | Die Cloud-AI-Variante funktioniert auf älteren Smartphones besser, da die Verarbeitung auf einem Cloud-Server erfolgt und das Gerät dadurch weniger belastet wird.   |
@@ -986,7 +984,7 @@ Untersucht den Unterschied zwischen lokaler AI und AI aus der Cloud.
 
 ---
 
-## 7. Auswahl der interessantesten Ergebnisse
+## 7. Auswahl der interessantesten Ergebnisse (nach Absprache wird die Aufgabe übersprungen, da diese Fragen bereits während den anderen Aufgaben beantwortet wurden)
 
 Wählt nach der Recherche eure **fünf interessantesten Ergebnisse** aus.
 
@@ -1027,21 +1025,40 @@ Beantwortet am Schluss folgende Fragen:
 9. Welche drei möglichen Richtungen für ein Projekt erkennt ihr?
 10. Welche Richtung würdet ihr aktuell empfehlen?
 
+### Fragen beantworten
+
+### Persönliches Fazit
+
+| Frage                                                            | Antwort                                                                                                                                                                             |
+| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Welche AI-Art interessiert euch am meisten?                   | Die On-Device-AI, da sie direkt auf dem Gerät ausgeführt werden kann und die Daten besser geschützt bleiben.                                                                        |
+| 2. Welches Modell fandet ihr am interessantesten?                | Instella-MoE, da es ein modernes Sprachmodell ist und für verschiedene Textaufgaben verwendet werden kann.                                                                          |
+| 3. Welche API würdet ihr gerne verwenden?                        | Room Database, da damit lokale Daten auf Android-Geräten gespeichert und verwaltet werden können.                                                                                   |
+| 4. Welche iOS-Technologie fandet ihr interessant?                | Core ML, da damit KI-Modelle direkt in iOS-Apps integriert und lokal auf Apple-Geräten ausgeführt werden können.                                                                    |
+| 5. Welche Android-Technologie fandet ihr interessant?            | LiteRT, da es ermöglicht, KI-Modelle direkt und effizient auf Android-Geräten auszuführen und dadurch On-Device-AI unterstützt.                                                     |
+| 6. Welche Funktionen wären für eine spätere App geeignet?        | Funktionen wie Notizen automatisch sortieren, Fragen beantworten, Lernfragen erstellen und Sprache in Text umwandeln wären für eine spätere App geeignet.                           |
+| 7. Was hat euch bei der Recherche überrascht?                    | Mich hat überrascht, wie umfangreich die Dokumentationen von KI-Modellen sind.                                                                                                      |
+| 8. Welche Themen möchtet ihr noch genauer untersuchen?           | APIs, Funktionen und KI-Modelle.                                                                                                                                                    |
+| 9. Welche drei möglichen Richtungen für ein Projekt erkennt ihr? | Eine Lern-App mit KI-Funktionen, eine Produktivitäts-App mit automatischer Organisation von Notizen, Dokumenten, Terminen usw. oder eine KI-Lernplattform für Programmieren (Code). |
+| 10. Welche Richtung würdet ihr aktuell empfehlen?                | Eine KI-Lernplattform für die Programmierung.                                                                                                                                       |
+
 ---
 
 ## Anforderungen
 
 Die Dokumentation muss mindestens enthalten:
 
-- [ ] 15 recherchierte AI-Modelle
+- [x] 15 recherchierte AI-Modelle (nach Absprache waren 10 auch möglich)
 - [x] 10 recherchierte APIs oder Schnittstellen
 - [x] 5 iOS-Technologien
 - [x] 5 Android-Technologien
-- [ ] 15 mögliche AI-Funktionen
-- [ ] einen Vergleich zwischen On-Device-AI und Cloud-AI
-- [ ] fünf besonders interessante Ergebnisse
-- [ ] ein persönliches Fazit
-- [ ] Quellen und Links zu den gefundenen Informationen
+- [x] 15 mögliche AI-Funktionen
+- [x] einen Vergleich zwischen On-Device-AI und Cloud-AI
+- [x] fünf besonders interessante Ergebnisse (Aufgabe übersprungen, da alle
+      Fragen bereits in den anderen Aufgaben beantwortet wurden) (nach
+      Absprache)
+- [x] ein persönliches Fazit
+- [x] Quellen und Links zu den gefundenen Informationen
 
 ---
 
