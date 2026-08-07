@@ -1,3 +1,12 @@
++++
+title = "Rechercheauftrag: On-Device-AI für mobile Apps"
+date = 2026-08-07
+description = "Recherche zu KI-Modellen, APIs und Technologien für mobile Apps mit On-Device-AI."
+
+[extra]
+tags = ["AI", "Mobile Apps", "On-Device-AI"]
++++
+
 # Rechercheauftrag: On-Device-AI für mobile Apps
 
 ## Auftrag
