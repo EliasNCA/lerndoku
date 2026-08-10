@@ -1,7 +1,7 @@
 +++
 title = "Projektauftrag: Zwei Ideen für eine On-Device-AI-App: Erste Projektidee"
 date = 2026-08-10
-description = "Ausarbeitung der ersten Projektidee für eine mobile On-Device-AI-App.
+description = "Ausarbeitung der ersten Projektidee für eine mobile On-Device-AI-App."
 
 [extra]
 tags = ["AI", "Mobile Apps", "On-Device-AI", "Projektideen"]
