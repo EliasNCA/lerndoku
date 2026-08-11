@@ -199,6 +199,22 @@ Erstellt eine Tabelle:
 | Speech Framework                 | Sprache des Benutzers in Text umwandeln, um schneller kommunizieren zu können                               | Ja   | Nein    | Nein            |
 | Android SpeechRecognizer         | Sprache des Benutzers in Text umwandeln, um schneller kommunizieren zu können                               | Nein | Ja      | Nein            |
 
+### Detaillierte Erklärung der APIs und Schnittstellen
+
+Die App soll zusätzlich einen offenen KI-Chatbot erhalten, der unabhängig von
+einer bestimmten Programmieraufgabe verwendet werden kann. Die Kommunikation mit
+dem Benutzer und dem KI-Chatbot verläuft entweder über Text oder Mikrofon. Der
+Benutzer kann Fragen über seinen Code stellen, Code erklären lassen oder sich
+bei einem Problem helfen lassen.
+
+Die KI kann beispielsweise Fragen wie "Was macht diese Funktion" beantworten,
+Fehler im Code erklären oder Verbesserungsvorschläge machen.
+
+Der Chatbot soll somit nicht nur für die automatisch erstellten
+Programmieraufgaben verwendet werden, sondern auch als allgemeine Hilfe beim
+Programmieren. Die Kommunikation kann dabei sowohl über Text als auch über
+Sprache erfolgen.
+
 ---
 
 ### 5. Umsetzung auf iOS
